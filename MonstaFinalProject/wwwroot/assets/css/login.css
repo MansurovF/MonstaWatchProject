@@ -1,0 +1,137 @@
+.headoflogin {
+  text-align: center;
+}
+.headoflogin h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+.headoflogin .contentabout a {
+  color: white;
+}
+.headoflogin .contentabout span {
+  color: rgb(145, 96, 7);
+}
+
+#Loginsys h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: 50px;
+  font-family: auto;
+}
+#Loginsys .alllogin {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-left: 24rem;
+  padding: 3rem;
+}
+#Loginsys .alllogin .login-form p {
+  color: white;
+  text-align: start;
+}
+#Loginsys .alllogin .login-form p i {
+  color: red;
+  font-size: 7px;
+}
+#Loginsys .alllogin .login-form p input {
+  font-weight: bold;
+  font-size: 15px;
+  width: 40rem;
+  border: 200em;
+  padding: 10px 0;
+  border: 1px solid #828181;
+  margin: 5px;
+  color: rgb(226, 159, 43);
+}
+#Loginsys .alllogin .login-form p input:hover {
+  border: 2px solid darkgoldenrod;
+}
+#Loginsys .alllogin .login-form p .remembermeee {
+  width: 10px;
+}
+#Loginsys .alllogin .login-form button {
+  width: 100px;
+  height: 46px;
+  border-radius: 5px;
+  border: transparent;
+  background: #3c3b3b;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#Loginsys .alllogin .login-form button:hover {
+  background: rgb(120, 89, 10);
+  transition: 0.7s;
+}
+
+.headofregister {
+  text-align: center;
+}
+.headofregister h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+.headofregister .contentabout a {
+  color: white;
+}
+.headofregister .contentabout span {
+  color: rgb(145, 96, 7);
+}
+
+#Registersys h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: 50px;
+  font-family: auto;
+}
+#Registersys .alllogin {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-left: 24rem;
+  padding: 3rem;
+}
+#Registersys .alllogin .login-form p {
+  color: white;
+  text-align: start;
+}
+#Registersys .alllogin .login-form p input {
+  font-weight: bold;
+  font-size: 15px;
+  width: 40rem;
+  border: 200em;
+  padding: 10px 0;
+  border: 1px solid #828181;
+  margin: 5px;
+  color: rgb(226, 159, 43);
+}
+#Registersys .alllogin .login-form p input:hover {
+  border: 2px solid darkgoldenrod;
+}
+#Registersys .alllogin .login-form p .remembermeee {
+  width: 10px;
+}
+#Registersys .alllogin .login-form button {
+  width: 100px;
+  height: 46px;
+  border-radius: 5px;
+  border: transparent;
+  background: #3c3b3b;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#Registersys .alllogin .login-form button:hover {
+  background: rgb(120, 89, 10);
+  transition: 0.7s;
+}/*# sourceMappingURL=login.css.map */

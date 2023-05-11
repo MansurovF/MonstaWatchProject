@@ -1,0 +1,168 @@
+.headofwish{
+    text-align: center;
+    h1{
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    .contentabout{
+        a{
+            color: white;
+        }
+        span{
+            color: rgb(145, 96, 7);
+        }
+    }
+}
+#Wishlist{
+    padding: 5rem 0;
+    .container{
+        width: 80%;
+        .row{
+            .col-lg-12{
+                .cart-table {
+                    
+                    .pro-thumbnail {
+                        max-width: 160px;
+                        min-width: 32px;
+                        width: 160px;
+                        a {
+                            display: block;
+                            img {
+                                width: 70px;
+                                background-color:  #f6f7f8;
+                            }
+                        }
+                    }
+                    .pro-title {
+                        min-width: 200px;
+                        color: white;
+                    }
+                       td.pro-title {
+                        padding-top: 2rem;
+                            a {
+                            font-size: 16px;
+                            color: white;
+                             &:hover {
+                                color:  #ab6700;
+                            }
+                        }
+                    }
+                    .pro-price {
+                        color: white;
+                        padding-top: 2rem;
+                        span {
+                            display: block;
+                            font-size: 15px; 
+                            color: white;
+                        }
+                    }
+                    .pro-quantity {
+                        color: white;
+                        padding-top: 23px;
+                        .pro-qty {
+                            width: 50px;
+                            display: inline-block;
+                            margin: auto;
+                            .inputer{
+                                width: 50px;
+                                height: 37px;
+                                display: flex;
+                                .plus{
+                                    background: transparent;
+                                    border: none;
+                                    color: white;
+                                    padding-left: 5px;
+                                    &:hover{
+                                        color: #ab6700;
+                                        transform: .6s;
+                                    }
+                                }
+                                .minus{
+                                    background: transparent;
+                                    border: none;
+                                    color: white;
+                                    padding-right: 5px;
+                                    &:hover{
+                                        color: #ab6700;
+                                        transform: .6s;
+                                    }
+                                }
+                                
+                            }
+                            
+                            input {
+                                padding-right: 0;
+                                font-size: 15px;
+                                border-radius: 0;
+                                background: transparent;
+                                border: 1px solid #e5e5e5;
+                                color: white;
+                            }
+                        }
+                    }
+                    .pro-subtotal{
+                        color: white;
+                        span {
+                            display: block;
+                            font-size: 15px; 
+                            color: white;
+                            margin-top: 23px;
+                          }
+                    }
+                    .pro-remove{
+                        color: white;
+                        i{
+                            color: white;
+                            padding-top: 20px;
+                            font-size: 20px;
+                            padding-left: 0px;
+                            cursor: pointer;
+                            &:hover{
+                                color: #ab6700;
+                                transition: .6s;
+                            }
+                        }
+                        
+                    }
+                    .pro-add{
+                        padding-top: 26px;
+                        
+                        a{
+                            background: rgb(230, 152, 6);
+                            width: 30%;
+                            font-family: auto;
+                            font-weight: 600;
+                            border: 1px solid rgb(13, 13, 13);
+                            color: white;
+                            font-size: 14px;
+                            padding: 12px 23px;
+                            border-radius: 10px;
+                            &:hover{
+                                background: rgb(157, 104, 5) ;
+                                transition: .6s;
+                            }
+                        }
+                    }
+                    
+                }
+                @media only screen and (max-width: 575px) {
+                    .cart-table {
+                        th.pro-thumbnail {
+                            a {
+                                width: 160px;
+                            }
+                        }
+                        td.pro-thumbnail {
+                            a {
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

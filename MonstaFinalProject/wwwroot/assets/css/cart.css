@@ -1,0 +1,188 @@
+.headofcart {
+  text-align: center;
+}
+.headofcart h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+.headofcart .contentabout a {
+  color: white;
+}
+.headofcart .contentabout span {
+  color: rgb(145, 96, 7);
+}
+
+#Cart {
+  padding: 5rem 0;
+}
+#Cart .container {
+  width: 80%;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-thumbnail {
+  max-width: 160px;
+  min-width: 32px;
+  width: 160px;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-thumbnail a {
+  display: block;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-thumbnail a img {
+  width: 70px;
+  background-color: #f6f7f8;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-title {
+  min-width: 200px;
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table td.pro-title {
+  padding-top: 2rem;
+}
+#Cart .container .row .col-lg-12 .cart-table td.pro-title a {
+  font-size: 16px;
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table td.pro-title a:hover {
+  color: #ab6700;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-price {
+  color: white;
+  padding-top: 2rem;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-price span {
+  display: block;
+  font-size: 15px;
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity {
+  color: white;
+  padding-top: 23px;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty {
+  width: 50px;
+  display: inline-block;
+  margin: auto;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty .inputer {
+  width: 50px;
+  height: 37px;
+  display: flex;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty .inputer .plus {
+  background: transparent;
+  border: none;
+  color: white;
+  padding-left: 5px;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty .inputer .plus:hover {
+  color: #ab6700;
+  transform: 0.6s;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty .inputer .minus {
+  background: transparent;
+  border: none;
+  color: white;
+  padding-right: 5px;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty .inputer .minus:hover {
+  color: #ab6700;
+  transform: 0.6s;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-quantity .pro-qty input {
+  padding-right: 0;
+  font-size: 15px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #e5e5e5;
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-subtotal {
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table .pro-subtotal span {
+  display: block;
+  font-size: 15px;
+  color: white;
+  margin-top: 23px;
+}
+#Cart .container .row .col-lg-12 .cart-table #pro-remove {
+  color: white;
+}
+#Cart .container .row .col-lg-12 .cart-table #pro-remove i {
+  color: white;
+  padding: 20px 0 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#Cart .container .row .col-lg-12 .cart-table #pro-remove i:hover {
+  color: #ab6700;
+  transition: 0.6s;
+}
+@media only screen and (max-width: 575px) {
+  #Cart .container .row .col-lg-12 .cart-table th.pro-thumbnail a {
+    width: 160px;
+  }
+  #Cart .container .row .col-lg-12 .cart-table td.pro-thumbnail a {
+    width: 160px;
+  }
+}
+
+#Aftercart .aftercartal {
+  display: flex;
+}
+#Aftercart .aftercartal .col-lg-9 .priceaftercart {
+  color: #ab6700;
+}
+#Aftercart .aftercartal .col-lg-9 h3 {
+  color: white;
+  font-size: 31px;
+  font-family: ui-monospace;
+  margin-bottom: 7px;
+}
+#Aftercart .aftercartal .col-lg-9 .subtotals {
+  color: white;
+}
+#Aftercart .aftercartal .col-lg-9 .shippings {
+  color: white;
+}
+#Aftercart .aftercartal .col-lg-9 #shippings {
+  color: white;
+}
+#Aftercart .aftercartal .col-lg-9 .adreschange {
+  color: #ab6700;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres {
+  padding-left: 1rem;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres .checkoutfor button {
+  margin-left: 23rem;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres .checkoutfor button:hover {
+  background: white;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres .checkoutfor button:hover a {
+  color: white;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres .checkoutfor button a {
+  padding: 10px;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+#Aftercart .aftercartal .col-lg-9 #Countryadres a {
+  color: #ab6700;
+}
+#Aftercart .aftercartal .col-lg-9 .countryclick .container.demo {
+  margin: 2rem 0 0 0;
+}
+#Aftercart .aftercartal .col-lg-9 .countryclick .container.demo #country {
+  width: 53%;
+}
+#Aftercart .aftercartal .col-lg-9 .countryclick .container.demo .col-sm-4 {
+  width: 22%;
+}
+#Aftercart .aftercartal .col-lg-9 .countryclick .container.demo .form-label {
+  color: white;
+  font-family: ui-monospace;
+}
+#Aftercart .aftercartal .col-lg-9 .show {
+  display: block;
+}/*# sourceMappingURL=cart.css.map */

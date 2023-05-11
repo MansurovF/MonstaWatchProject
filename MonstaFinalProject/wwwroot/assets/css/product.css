@@ -1,0 +1,258 @@
+#Mainprod .alprod {
+  justify-content: space-around;
+}
+#Mainprod .alprod .left #zoom img {
+  width: -webkit-fill-available;
+}
+#Mainprod .alprod .left .row .sliderofprod {
+  padding-top: 10px;
+  display: flex;
+}
+#Mainprod .alprod .left .row .sliderofprod .img-prod {
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  width: 22%;
+}
+#Mainprod .alprod .left .row .sliderofprod .img-prod img {
+  width: 100%;
+}
+#Mainprod .alprod .right h4 {
+  color: white;
+}
+#Mainprod .alprod .right .priceprod {
+  color: #9f6119;
+}
+#Mainprod .alprod .right .brandofprod {
+  color: white;
+}
+#Mainprod .alprod .right .brandofprod a {
+  margin-left: 10px;
+  color: green;
+}
+#Mainprod .alprod .right .brandofprod a:hover {
+  color: rgb(105, 152, 105);
+}
+#Mainprod .alprod .right .colorofprod {
+  color: white;
+}
+#Mainprod .alprod .right .colorofprod a {
+  margin-left: 10px;
+  color: goldenrod;
+}
+#Mainprod .alprod .right .colorofprod a:hover {
+  color: rgb(185, 158, 92);
+}
+#Mainprod .alprod .right .textprod {
+  margin: 14px 0;
+}
+#Mainprod .alprod .right .textprod p {
+  color: white;
+}
+#Mainprod .alprod .right .prodstar i {
+  font-size: 12px;
+  color: #a65e0b;
+}
+#Mainprod .alprod .right .prodstar i:hover {
+  color: #a27b4e;
+}
+#Mainprod .alprod .right .nextprodt {
+  display: flex;
+  padding-top: 30px;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod {
+  margin-right: 30px;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod button:hover i {
+  color: #9f6119;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod span {
+  color: white;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod #quantityprodin {
+  border: none;
+  background: #494747;
+  border-radius: 5px;
+  padding: 10px 5px;
+  text-align: center;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod #quantityprodin span {
+  padding-right: 10px;
+}
+#Mainprod .alprod .right .nextprodt .quantityprod #quantityprodin .prodminus {
+  position: absolute;
+}
+#Mainprod .alprod .right .nextprodt button {
+  background: transparent;
+  border: none;
+  background: rgb(191, 129, 13);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+#Mainprod .alprod .right .nextprodt button:hover {
+  background: rgb(121, 84, 15);
+}
+#Mainprod .alprod .right .nextprodt .heardproduct {
+  margin-left: 1rem;
+}
+#Mainprod .alprod .right .nextprodt .heardproduct .prodheart i {
+  font-size: 20px;
+}
+#Mainprod .alprod .right .categoryprod {
+  padding-top: 20px;
+}
+#Mainprod .alprod .right .categoryprod p label {
+  color: white;
+  font-family: auto;
+  margin-right: 10px;
+}
+#Mainprod .alprod .right .categoryprod p a {
+  color: white;
+}
+#Mainprod .alprod .right .categoryprod p a:hover {
+  color: #a65e0b;
+  transition: 0.5s;
+}
+#Mainprod .alprod .right .icon-div {
+  padding-top: 20px;
+}
+#Mainprod .alprod .right .icon-div i {
+  border: 1px solid rgb(125, 124, 124);
+  border-radius: 25px;
+  padding: 10px;
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+#Mainprod .alprod .right .icon-div i:hover {
+  background: white;
+  color: orange;
+}
+
+#Descreview .container {
+  width: 92%;
+  padding: 0 65px;
+}
+#Descreview .container .in-descrip {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Descreview .container .in-descrip .desc-btn .active::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: orange;
+  bottom: 0;
+}
+#Descreview .container .in-descrip a {
+  cursor: pointer;
+  margin: 5px 20px;
+  color: #868686;
+  background-color: unset;
+  font-size: 20px;
+  padding: 0 0 5px;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+  font-family: "Marcellus", serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#Descreview .container .in-descrip a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: #de811e;
+  bottom: 0;
+  transition: 0.3s;
+}
+#Descreview .container .in-descrip a:hover::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: orange;
+  bottom: 0;
+}
+#Descreview .container #reviewvshiden .review-frst {
+  color: white;
+  margin-bottom: 2rem;
+}
+#Descreview .container #reviewvshiden .review-frst h2 {
+  font-size: 20px;
+  font-family: auto;
+}
+#Descreview .container #reviewvshiden .review-secnd {
+  padding: 0;
+  border: 1px solid rgb(101, 97, 97);
+}
+#Descreview .container #reviewvshiden .review-secnd .usa {
+  display: flex;
+}
+#Descreview .container #reviewvshiden .review-secnd .usa .sekil-01 {
+  display: inline-block;
+}
+#Descreview .container #reviewvshiden .review-secnd .usa .sekil-01 img {
+  border-radius: 65px;
+  width: 45%;
+  margin: 5px 0 0 22px;
+}
+#Descreview .container #reviewvshiden .review-secnd .usa .pentagon h4 {
+  font-family: auto;
+  color: white;
+  font-size: 20px;
+}
+#Descreview .container #reviewvshiden .review-secnd .usa .stars {
+  margin-left: 51rem;
+  color: #a65e0b;
+}
+#Descreview .container #reviewvshiden .review-secnd .baku p {
+  color: white;
+  font-family: auto;
+  margin-left: 8rem;
+}
+#Descreview .container #reviewvshiden #Add-a {
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 40px;
+  display: inline-block;
+  border: 2px solid #fff;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 35px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#Descreview .container #reviewvshiden #Add-a span {
+  color: white;
+}
+#Descreview .container #reviewvshiden #Add-a:hover {
+  border: 2px solid orange;
+  color: #a65e0b;
+  transition: 0.4s;
+}
+#Descreview .container #reviewvshiden #Add-a i {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+}
+#Descreview .container .in-p span {
+  color: #5f5c5c;
+}
+#Descreview .container .in-p p {
+  color: #5f5c5c;
+}
+
+.color {
+  color: orange;
+}/*# sourceMappingURL=product.css.map */

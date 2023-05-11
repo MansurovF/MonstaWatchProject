@@ -1,0 +1,158 @@
+*hr{
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#Errbody{
+    .errtext{
+        text-align: center;
+        width: 100%;
+        h1{
+            color: #a65e0b;
+            font-size: 200px;
+        }
+        h2{
+            color: white;
+            font-size: 50px;
+        }
+        p{
+            color: #a0a0a0;
+            margin-top: 1rem;
+            display: -webkit-inline-box;
+            width: 50%;
+        }
+        .search{
+            margin-top: 25px;
+            input{
+                background: white;
+                padding: 7px 8px;
+            }
+            .searchButton{
+                border: 1px solid #2d2d2d2d
+                background-color #9085852d;
+                &:hover{
+                    i{
+                        border: 1px solid darkorange;
+                    }
+                }
+                
+                i{
+                    border: 1px solid orange;
+                    
+                    font-size: 22px;
+                    color: white;
+                    padding:  8px;    
+                }
+            }
+            
+        }
+        div{
+            padding-bottom:2rem ;
+            :hover .button{
+                background: #8c4e08;
+            }
+        }
+        .button{
+            background: #a8741a;
+            border-radius: 35px;
+            box-shadow: none;
+            color: #fff;
+            display: inline-block;
+            font-family: Josefin Sans,Arial,Helvetica,sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 60px;
+            padding: 0 30px;
+            text-shadow: none;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            white-space: nowrap;       
+        }
+    }
+}
+
+
+//after this blog page
+
+#BlogSlid{
+    
+    .container{
+        .allofbolg{
+            display: flex;
+            margin-bottom: 20px;
+            .leftblog{
+                margin-left: 53px;
+                img{
+                    width: 84%; 
+                    margin-left: 22px;
+                }
+            }
+            .rightblog{
+                .firsttype{
+                    display: flex;
+                    i{
+                        position: relative;
+                        margin: 10px 19px 0 0;
+                        font-size: 20px;
+
+                        color: #a8741a;
+                        rotate: 45deg;
+                    }
+                    p{
+                        color: #fff;
+                         font-size: 30px;
+                        font-family: auto;
+                    }
+                }
+                .contentofblog{
+                    display: flex;
+                    margin-top: 50px;
+                    i{
+                        color: #fff;
+                        margin: 5px 10px 0 0;
+                        position: relative;
+                    }
+                    p{
+                        color: #a0a0a0;
+                        span{
+                            color:#a65e0b;
+                        }
+                    }
+                    .privet{
+                        margin: 6px 32px;
+                    }
+                }
+                .afterblogright{
+                    margin-top: 10px;
+                    width: 82%;
+                    p{
+                        color: #a0a0a0;
+                    }
+                }
+                .endofblog{
+                    button{
+                        margin-top: 40px;
+                        padding: 10px;
+                        &:hover{
+                          background-color: #a65e0b;
+                          transition: .6s;
+                        }
+                        span{
+                            margin: 20px;
+                            background: transparent;
+                        }
+                        border-radius: 5px;
+                        
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+

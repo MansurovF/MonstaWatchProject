@@ -1,0 +1,441 @@
+﻿@model HomeVM
+
+<section id="Slider">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @foreach (Slider slider in Model.Sliders)
+            {
+                <div class="swiper-slide" style="background-image: url(/assets/images/@slider.Image);">
+                    <div class="text-div">
+                        <span>@slider.Title</span>
+                        <h1>@slider.description</h1>
+                        <p>Pre-Baselworld 2018 – Jaquet Droz Grande Seconde</p>
+
+                        <p class="specialp">Starting at <span>$1.699.00</span> </p>
+                        <a href="@slider.Link">SHOPPING NOW</a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section id="Categories">
+    <div class="container">
+        <div class=" row pt-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                <div class="card item1 border-0">
+                    <div class="ca-img">
+                        <a href="">
+                            <img src="~/assets/images/banner-home2.1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="ca-wrd">
+                        <div>
+                            <p>Design Creative</p>
+                            <h3 class="fw-bold mb-1  ">Modern &amp; Clean</h3>
+                            <p>From $60.99 - Sale $20%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                <div class="card item1 border-0">
+                    <div class="ca-img">
+                        <a href="">
+                            <img src="~/assets/images/banner-home2.2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="ca-wrd">
+                        <div>
+                            <p>Design Creative</p>
+                            <h3 class="fw-bold mb-1  ">Modern &amp; Clean</h3>
+                            <p>From $60.99 - Sale $20%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="title-div">
+    <h3>Latest Products</h3>
+</div>
+<div class="your-class">
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="slider-item">
+        <a href="product.html">
+            <div class="box">
+                <div class="img-div">
+                    <img src="~/assets/images/sat.jpg" alt="...">
+                    <img src="~/assets/images/sat2.jpg" alt="...">
+                    <div class="bag ">
+                        <div class="cart-ico">
+                            <div class="heaart">
+                                <button><a><i class="fa-solid fa-heart"></i></a></button>
+                            </div>
+                            <div class="cart">
+                                <button><a><span>Add to Cart</span></a></button>
+                            </div>
+                            <div class="compare">
+                                <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-div">
+                    <div class="rating2">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <br>
+                    </div>
+                    <div class="rating">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">Donec eu furniture</h5>
+                        <div class="price-prod"><span>$74.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="typeofmoney">
+    <div class="container">
+        <hr style="padding: 1rem 0; color: #706e6e;">
+        <div class="allofmoney ">
+            <div class="leftofmoney">
+                <div>
+                    <h4>Money Return Guarantee</h4>
+                    <p>Back guarantee under 30 days</p>
+                </div>
+            </div>
+            <div class="rightofmoney">
+                <h4>Free Shipping On Order Over $120</h4>
+                <p>Free shipping on all order</p>
+            </div>
+        </div>
+        <hr style="padding: 1rem 0; color: #706e6e;">
+    </div>
+</div>
+<section id="Feabestsale">
+    <div class="container">
+        <div class="fulloffbs">
+            <div class="topoffbs">
+                <div class="item1">
+                    <button type="button" class="slider-button active" data-slide="0">
+                        <a>
+                            <span>Featured</span>
+                        </a>
+                    </button>
+                </div>
+                <div class="item2">
+                    <button type="button" class="slider-button" data-slide="1">
+                        <a>
+                            <span>Bestselling</span>
+                        </a>
+                    </button>
+                </div>
+                <div class="item3">
+                    <button type="button" class="slider-button" data-slide="2">
+                        <a>
+                            <span>Onsale</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <div class="slider-content active">
+                @await Html.PartialAsync("_ProductListPartial",Model.Featured)
+            </div>
+            <div class="slider-content">
+                @await Html.PartialAsync("_ProductListPartial",Model.BestSelling)
+            </div>
+            <div class="slider-content">
+                @await Html.PartialAsync("_ProductListPartial",Model.Onsale)
+            </div>
+        </div>
+    </div>
+</section>
+<section id="MirroraNew">
+    <div class="container">
+        <div class="title-div">
+            <h3>Mirrora News</h3>
+        </div>
+        <div class="allrightmirror">
+            <div class="row slider3-item">
+                <div class="mirroraslide col-lg-4 col-sm-6 col-6">
+                    <a href="blog.html">
+                        <div class="slideofmirror">
+                            <div class="cardD">
+                                <img src="~/assets/images/10blog.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>Blog Image Post</h4>
+                                    <h5>By <span>admin</span> / 10 Mar 2015</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href=""><span>Contunie reading</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="mirroraslide col-lg-4 col-sm-6 col-6">
+                    <a href="blog.html">
+                        <div class="slideofmirror">
+                            <div class="cardD">
+                                <img src="~/assets/images/14blog.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>Blog Image Post</h4>
+                                    <h5>By <span>admin</span> / 10 Mar 2015</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href=""><span>Contunie reading</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="mirroraslide col-lg-4 col-sm-6 col-6">
+                    <a href="blog.html">
+                        <div class="slideofmirror">
+                            <div class="cardD">
+                                <img src="~/assets/images/5blog.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>Blog Image Post</h4>
+                                    <h5>By <span>admin</span> / 10 Mar 2015</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href=""><span>Contunie reading</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="mirroraslide col-lg-4 col-sm-6 col-6">
+                    <a href="blog.html">
+                        <div class="slideofmirror">
+                            <div class="cardD">
+                                <img src="~/assets/images/9blog.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>Blog Image Post</h4>
+                                    <h5>By <span>admin</span> / 10 Mar 2015</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href=""><span>Contunie reading</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="mirroraslide col-lg-4 col-sm-6 col-6">
+                    <a href="blog.html">
+                        <div class="slideofmirror">
+                            <div class="cardD">
+                                <img src="~/assets/images/6blog.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>Blog Image Post</h4>
+                                    <h5>By <span>admin</span> / 10 Mar 2015</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href=""><span>Contunie reading</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

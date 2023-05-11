@@ -1,0 +1,73 @@
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.endofblog button {
+  border: 1px solid #7c7979;
+}
+.endofblog button a {
+  color: white;
+  background: transparent;
+}
+
+.contblog {
+  display: flex;
+  justify-content: center;
+}
+.contblog span {
+  color: white;
+  margin: 0 7px;
+}
+.contblog a {
+  color: white;
+}
+.contblog a:hover {
+  color: rgb(144, 101, 22);
+  transition: 0.4s;
+}
+.contblog .specialforblog {
+  color: rgb(147, 99, 10);
+}
+
+#Continuebloga .imgbloga {
+  text-align: center;
+  padding-top: 1rem;
+}
+#Continuebloga .imgbloga img {
+  width: 70%;
+}
+#Continuebloga .hofcloga h3 {
+  color: white;
+  font-family: auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+#Continuebloga .allofbloga {
+  width: 90%;
+  margin-left: 4rem;
+}
+#Continuebloga .allofbloga .italicpostofbloga {
+  margin: 20px 0;
+  border-left: 4px solid orange;
+}
+#Continuebloga .allofbloga .italicpostofbloga em {
+  color: #7c7979;
+}
+#Continuebloga .allofbloga p {
+  color: #a0a0a0;
+  font-family: initial;
+}
+
+.first h1 {
+  margin-right: 14rem;
+}
+
+.second h1 {
+  margin-right: 14rem;
+}
+
+.third h1 {
+  margin-right: 14rem;
+}/*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,223 @@
+.headofcart{
+    text-align: center;
+    h1{
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    .contentabout{
+        a{
+            color: white;
+        }
+        span{
+            color: rgb(145, 96, 7);
+        }
+    }
+}
+#Cart{
+    padding: 5rem 0;
+    .container{
+        width: 80%;
+        .row{
+            .col-lg-12{
+                .cart-table {
+                    
+                    .pro-thumbnail {
+                        max-width: 160px;
+                        min-width: 32px;
+                        width: 160px;
+                        a {
+                            display: block;
+                            img {
+                                width: 70px;
+                                background-color:  #f6f7f8;
+                            }
+                        }
+                    }
+                    .pro-title {
+                        min-width: 200px;
+                        color: white;
+                    }
+                       td.pro-title {
+                        padding-top: 2rem;
+                            a {
+                            font-size: 16px;
+                            color: white;
+                             &:hover {
+                                color:  #ab6700;
+                            }
+                        }
+                    }
+                    .pro-price {
+                        color: white;
+                        padding-top: 2rem;
+                        span {
+                            display: block;
+                            font-size: 15px; 
+                            color: white;
+                        }
+                    }
+                    .pro-quantity {
+                        color: white;
+                        padding-top: 23px;
+                        .pro-qty {
+                            width: 50px;
+                            display: inline-block;
+                            margin: auto;
+                            .inputer{
+                                width: 50px;
+                                height: 37px;
+                                display: flex;
+                                .plus{
+                                    background: transparent;
+                                    border: none;
+                                    color: white;
+                                    padding-left: 5px;
+                                    &:hover{
+                                        color: #ab6700;
+                                        transform: .6s;
+                                    }
+                                }
+                                .minus{
+                                    background: transparent;
+                                    border: none;
+                                    color: white;
+                                    padding-right: 5px;
+                                    &:hover{
+                                        color: #ab6700;
+                                        transform: .6s;
+                                    }
+                                }
+                                
+                            }
+                            
+                            input {
+                                padding-right: 0;
+                                font-size: 15px;
+                                border-radius: 0;
+                                background: transparent;
+                                border: 1px solid #e5e5e5;
+                                color: white;
+                            }
+                        }
+                    }
+                    .pro-subtotal{
+                        color: white;
+                        span {
+                            display: block;
+                            font-size: 15px; 
+                            color: white;
+                            margin-top: 23px;
+                          }
+                    }
+                    #pro-remove{
+                        color: white;
+                        i{
+                            color: white;
+                            padding: 20px 0 0 20px;
+                            font-size: 20px;
+                            cursor: pointer;
+                            &:hover{
+                                color: #ab6700;
+                                transition: .6s;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                @media only screen and (max-width: 575px) {
+                    .cart-table {
+                        th.pro-thumbnail {
+                            a {
+                                width: 160px;
+                            }
+                        }
+                        td.pro-thumbnail {
+                            a {
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+#Aftercart{
+    .aftercartal{
+        display: flex;
+        .col-lg-9{
+            .priceaftercart{
+                color: #ab6700;
+            }
+            h3{
+                color: white;
+                font-size: 31px;
+                font-family: ui-monospace;
+                margin-bottom: 7px;
+            }
+            .subtotals{
+                color: white;
+            }
+            .shippings{
+                color: white;
+            }
+            #shippings{
+                color: white;
+            }
+            .adreschange{
+                color: #ab6700;
+            }
+            #Countryadres{
+                padding-left: 1rem;
+                
+                .checkoutfor{
+                    button{
+                        margin-left: 23rem;
+                        
+                        &:hover{
+                            background: white;
+                            a{
+                                color: white;
+                            }
+                        }
+                        a{
+                            padding: 10px;
+                            border: 1px solid orange;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+               
+                
+                a{
+                    color: #ab6700;
+                    
+                }
+            }
+            .countryclick{
+                .container.demo {
+                    margin: 2rem 0 0 0;
+                    #country{
+                        width: 53%;
+                    }
+                    .col-sm-4{
+                      width:22%;
+                    }
+                    .form-label{
+                        color: white;
+                        font-family: ui-monospace;
+                    }
+                }
+                
+            }
+            .show {
+                display: block;
+            }
+            
+        }
+    }
+}

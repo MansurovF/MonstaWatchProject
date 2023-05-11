@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.startofcontact {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.startofcontact div {
+  padding-top: 7px;
+}
+.startofcontact h1 {
+  color: white;
+}
+.startofcontact span {
+  color: white;
+}
+.startofcontact a {
+  color: white;
+}
+.startofcontact a:hover {
+  color: orange;
+  transition: 0.6s;
+}
+
+#Map {
+  background-color: #f7f7f7;
+  padding: 5px;
+  width: 70%;
+  margin-left: 12rem;
+}
+#Map iframe {
+  height: 425px;
+  width: 100%;
+  border: none;
+}
+
+#Bodycontact {
+  padding: 85px 0;
+}
+#Bodycontact .rowa {
+  display: flex;
+}
+#Bodycontact .left {
+  margin-left: 4rem;
+}
+#Bodycontact .left .pofcontact {
+  width: 100%;
+}
+#Bodycontact .left .pofcontact span {
+  color: white;
+  font-family: initial;
+  font-size: 13px;
+}
+#Bodycontact .left .pofcontact input {
+  height: 50px;
+  font-size: 13px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  width: 140%;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #3a3a3a;
+  background: transparent;
+  outline: none;
+}
+#Bodycontact .left .pofcontact .sol {
+  padding: 0 5px 0 0;
+}
+#Bodycontact .left .pofcontact .alt {
+  display: flex;
+  flex-direction: column;
+}
+#Bodycontact .left .pofcontact .alt textarea {
+  width: 70%;
+  color: #fff;
+  max-height: 280px;
+  height: 280px;
+  min-height: 60px;
+  padding: 10px 20px;
+  font-weight: 300;
+  margin-bottom: 23px;
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  outline: none;
+}
+#Bodycontact .left .pofcontact .alt a {
+  font-size: 14px;
+  font-family: Marcellus, serif;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+  margin-right: 40rem;
+  border: 1px solid #2d2d2d;
+  color: #a0a0a0;
+  background: #383838;
+  border-radius: 0;
+  max-width: 100%;
+  padding: 15px;
+  outline: none;
+}
+#Bodycontact .left .pofcontact .alt a:hover {
+  background-color: orange;
+  color: white;
+  transition: 0.3s;
+}
+#Bodycontact h3 {
+  color: white;
+  font-size: 20px;
+  font-family: initial;
+  padding-bottom: 10px;
+}
+#Bodycontact span {
+  color: #a0a0a0;
+  margin: 5px;
+}
+#Bodycontact p {
+  color: #a0a0a0;
+}
+#Bodycontact .right {
+  width: 40%;
+}
+#Bodycontact .right .workinghofp {
+  padding-top: 4rem;
+  margin-right: 10px;
+}
+#Bodycontact .right .workinghofp h3 {
+  font-size: 25px;
+}
+#Bodycontact .right .workinghofp span {
+  color: #a0a0a0;
+}
+#Bodycontact .right .textofp i {
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#Bodycontact .right .textofp i:hover {
+  color: orangered;
+  transition: 0.7s;
+}
+#Bodycontact .right .textofp .row div {
+  display: flex;
+  margin: 10px 0 5px 0;
+  align-items: baseline;
+}/*# sourceMappingURL=contact.css.map */

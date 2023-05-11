@@ -1,0 +1,137 @@
+* hr {
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Errbody .errtext {
+  text-align: center;
+  width: 100%;
+}
+#Errbody .errtext h1 {
+  color: #a65e0b;
+  font-size: 200px;
+}
+#Errbody .errtext h2 {
+  color: white;
+  font-size: 50px;
+}
+#Errbody .errtext p {
+  color: #a0a0a0;
+  margin-top: 1rem;
+  display: -webkit-inline-box;
+  width: 50%;
+}
+#Errbody .errtext .search {
+  margin-top: 25px;
+}
+#Errbody .errtext .search input {
+  background: white;
+  padding: 7px 8px;
+}
+#Errbody .errtext .search .searchButton {
+  border: 1px solid rgba(45, 45, 45, 0.1764705882) background-color rgba(144, 133, 133, 0.1764705882);
+}
+#Errbody .errtext .search .searchButton:hover i {
+  border: 1px solid darkorange;
+}
+#Errbody .errtext .search .searchButton i {
+  border: 1px solid orange;
+  font-size: 22px;
+  color: white;
+  padding: 8px;
+}
+#Errbody .errtext div {
+  padding-bottom: 2rem;
+}
+#Errbody .errtext div :hover .button {
+  background: #8c4e08;
+}
+#Errbody .errtext .button {
+  background: #a8741a;
+  border-radius: 35px;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 60px;
+  padding: 0 30px;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+#BlogSlid .container .allofbolg {
+  display: flex;
+  margin-bottom: 20px;
+}
+#BlogSlid .container .allofbolg .leftblog {
+  margin-left: 53px;
+}
+#BlogSlid .container .allofbolg .leftblog img {
+  width: 84%;
+  margin-left: 22px;
+}
+#BlogSlid .container .allofbolg .rightblog .firsttype {
+  display: flex;
+}
+#BlogSlid .container .allofbolg .rightblog .firsttype i {
+  position: relative;
+  margin: 10px 19px 0 0;
+  font-size: 20px;
+  color: #a8741a;
+  rotate: 45deg;
+}
+#BlogSlid .container .allofbolg .rightblog .firsttype p {
+  color: #fff;
+  font-size: 30px;
+  font-family: auto;
+}
+#BlogSlid .container .allofbolg .rightblog .contentofblog {
+  display: flex;
+  margin-top: 50px;
+}
+#BlogSlid .container .allofbolg .rightblog .contentofblog i {
+  color: #fff;
+  margin: 5px 10px 0 0;
+  position: relative;
+}
+#BlogSlid .container .allofbolg .rightblog .contentofblog p {
+  color: #a0a0a0;
+}
+#BlogSlid .container .allofbolg .rightblog .contentofblog p span {
+  color: #a65e0b;
+}
+#BlogSlid .container .allofbolg .rightblog .contentofblog .privet {
+  margin: 6px 32px;
+}
+#BlogSlid .container .allofbolg .rightblog .afterblogright {
+  margin-top: 10px;
+  width: 82%;
+}
+#BlogSlid .container .allofbolg .rightblog .afterblogright p {
+  color: #a0a0a0;
+}
+#BlogSlid .container .allofbolg .rightblog .endofblog button {
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+#BlogSlid .container .allofbolg .rightblog .endofblog button:hover {
+  background-color: #a65e0b;
+  transition: 0.6s;
+}
+#BlogSlid .container .allofbolg .rightblog .endofblog button span {
+  margin: 20px;
+  background: transparent;
+}/*# sourceMappingURL=error.css.map */

@@ -1,0 +1,151 @@
+.headoflogin{
+    text-align: center;
+    h1{
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    .contentabout{
+        a{
+            color: white;
+        }
+        span{
+            color: rgb(145, 96, 7);
+        }
+    }
+}
+#Loginsys{
+    h3{
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        font-size: 50px;
+        font-family: auto;
+    }
+    .alllogin{
+        width: 50%;
+        justify-content: center;
+        display: flex;
+        border: 1px solid white;
+        border-radius: 8px;
+        margin-left: 24rem;
+        padding: 3rem;
+        .login-form{
+            p{
+                color: white;
+                text-align: start;
+                i{
+                    color: red;
+                    font-size: 7px;
+                }
+                input{
+                    font-weight: bold;
+                    font-size: 15px;
+                    width: 40rem;
+                    border: 200em;
+                    padding: 10px 0;
+                    border: 1px solid #828181;
+                    margin: 5px;
+                    color: rgb(226, 159, 43);
+                    &:hover{
+                        border: 2px solid darkgoldenrod;
+                    }
+                }
+                .remembermeee{
+                    width: 10px;
+                }
+            }
+            button{
+                width: 100px;
+                height: 46px;
+                border-radius: 5px;
+                border: transparent;
+                background: #3c3b3b;
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                margin-top: 20px;
+                &:hover{
+                    background: rgb(120, 89, 10);
+                    transition: .7s;
+                }
+            }
+        }
+    }
+}
+
+//register start
+.headofregister{
+    text-align: center;
+    h1{
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    .contentabout{
+        a{
+            color: white;
+        }
+        span{
+            color: rgb(145, 96, 7);
+        }
+    }
+}
+#Registersys{
+    h3{
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        font-size: 50px;
+        font-family: auto;
+    }
+    .alllogin{
+        width: 50%;
+        justify-content: center;
+        display: flex;
+        border: 1px solid white;
+        border-radius: 8px;
+        margin-left: 24rem;
+        padding: 3rem;
+        .login-form{
+            p{
+                color: white;
+                text-align: start;
+                
+                input{
+                    font-weight: bold;
+                    font-size: 15px;
+                    width: 40rem;
+                    border: 200em;
+                    padding: 10px 0;
+                    border: 1px solid #828181;
+                    margin: 5px;
+                    color: rgb(226, 159, 43);
+                    &:hover{
+                        border: 2px solid darkgoldenrod;
+                    }
+                }
+                .remembermeee{
+                    width: 10px;
+                }
+            }
+            button{
+                width: 100px;
+                height: 46px;
+                border-radius: 5px;
+                border: transparent;
+                background: #3c3b3b;
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                margin-top: 20px;
+                &:hover{
+                    background: rgb(120, 89, 10);
+                    transition: .7s;
+                }
+            }
+        }
+    }
+}

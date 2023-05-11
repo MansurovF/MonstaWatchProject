@@ -1,0 +1,146 @@
+.headofabout{
+    text-align: center;
+    h1{
+        color: white;
+        margin-bottom: 10px;
+        
+    }
+    .contentabout{
+        a{
+            color: white;
+        }
+        span{
+            color: rgb(145, 96, 7);
+        }
+    }
+}
+#Entryabout{
+    padding-top: 2rem;
+    .imageabiuta{
+        .imgdiv{
+            padding-left: 9rem;
+            img{
+                font-size: 60%;
+            }
+        }
+        .contextabita{
+            width: 82%;
+            text-align: center;
+            margin: 1rem 0 0 7rem;
+            h3{
+                color: white;
+                font-family: math;
+                font-weight: 400;
+                line-height: 1.35;
+            }
+            p{
+                color: #a3a3a3;
+                margin: 10px 0;
+                font-family: math;
+            }
+            span{
+                color: burlywood;
+            }
+        }
+    }
+}
+#Typeofabout{
+    h3{
+        color: white;
+        text-align: center;
+        font-family: fangsong;
+        padding: 36px 0 28px 0;
+        margin-right: 51px;
+    }
+    .alloftypeabout{
+        display: flex;
+        padding-left: 98px;
+        .firstabout{
+            h5{
+                color: white;
+                text-align: center;
+                width: 67%;
+                margin-bottom: 10px;
+                font-family: fangsong;
+            }
+            p{
+                color: #a3a3a3;
+                text-align: center;
+                width: 67%;
+                font-size: 16px;
+                font-family: math;
+                background-color: #2d2d2d ;
+            }
+        }
+    }
+}
+#Typewithimage{
+.allimagetype{
+    padding-top: 4rem;
+    display: flex;
+    .card{
+        width: 21rem;
+        margin-left: 6rem;
+        img{
+            margin-left: 20px;
+        }
+        
+        .card-body{
+            text-align: center;
+            h5{
+                font-size: 20px;
+                color: white;
+                margin: 5px 0 6px 36px;
+                font-family: auto;
+            }
+            p{
+                color: #a3a3a3;
+                font-family: emoji;
+                width: 122%;
+            }
+        }
+    }
+}
+}
+#Endofabout{
+ .allendofabout{
+    text-align: center;
+    h3{
+        color: #a3a3a3;
+        margin-bottom: 10px;
+        font-family: fangsong;
+        padding: 20px 0 10px 0;
+    }
+    .sliderofaboutp{
+        margin: 20px 0;
+        p{
+            color: #a3a3a3;
+            width: 50%;
+            margin: auto;
+            font-family: fangsong;
+        }
+    }
+    .sliderofabout{
+        cursor: pointer;
+        i{
+            color: white;
+            font-size: 78px;
+            margin: 24px 0;
+        }
+        .writerofslide{
+            color: white;
+            .secondwriter{
+                color: #a3a3a3;
+                font-size: 12px;
+    font-family: sans-serif;
+            }
+        }
+        .rateofabout{
+            i{
+                color: goldenrod;
+                font-size: 15px;
+            }
+        }
+    }
+ }   
+}

@@ -1,0 +1,335 @@
+﻿@inject ILayoutService layoutService
+@{
+    IDictionary<string, string> settings = await layoutService.GetSettings();
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap-extendedv1.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/slick.css"/>
+<link rel="stylesheet" type="text/css" href="~/assets/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+<body>
+    <section id="Header1">
+        <div class="all-div">
+            <div class="left">
+                <div class="first">
+                    <div id="Pagelang">
+                        <a href="">
+                             <span>@settings.FirstOrDefault(s=>s.Key == "Translate").Value</span>
+                        </a>
+                        <div class="home-sub-menu">
+                            <a href="">Italy</a>
+                            <a href="">French</a>
+                            <a href="">Russian</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second">
+                    <div id="Pagecurenci">
+                        <a href="">
+                            <span>@settings.FirstOrDefault(s=>s.Key == "Money").Value</span>
+                        </a>
+                        <div class="home-sub-menu">
+                            <a href="">GBP - British Pound</a>
+                            <a href="">EUR - Euro</a>
+                            <a href="">Dirham - Dubai</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icon-div">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-solid fa-rss"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Header2">
+        <div class="all-div">
+            <div class="left">
+                <div class="first">
+                    <a href="index.html">
+                        <div class="img-div">
+                            <img src="~/assets/images/@settings.FirstOrDefault(s=>s.Key == "logo-brand").Value" alt="logo-brand">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icon-div">
+                    <i id="SearchIcon" class="fa-solid fa-magnifying-glass"></i>
+                    <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                    <div id="Page">
+                        <a class="specialgear" href="">
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                        <div class="home-sub-menu">
+                            <a href="login.html">Login</a>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                    <a href="/cart.html">
+                        <div class="bag">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Header-m">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4 col-lg-4">
+                    <i id="Sidebar-open" class="fa-solid fa-bars"></i>
+                </div>
+                <div class="col-md-4 col-sm-4 col-4 col-lg-4">
+                    <a href="index.html">
+                        <div class="img-div">
+                            <img src="http://monsta.mallthemes.com/monsta-black/wp-content/uploads/2018/11/logo3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-4 col-lg-4">
+                    <div class="icon-div">
+                        <a href="cart.html">
+                            <div class="bag">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span id="cart-count2">0</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Bottomnav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-3">
+                    <i class="fa-solid fa-shop"></i>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="col-md-3 col-sm-3 col-3">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Lefft">
+        <div class="second">
+            <div id="Home">
+                <a href="index.html">
+                    <span>HOME</span>
+                </a>
+            </div>
+            <div id="Shop">
+                <a href="shop.html">
+                    <span>SHOP</span>
+                </a>
+            </div>
+            <div id="Blog">
+                <a href="blog.html">
+                    <span>BLOG</span>
+                </a>
+            </div>
+            <div id="Page">
+                <a href="">
+                    <span>PAGE</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="home-sub-menu">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="error.html">Page 404</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Up">
+        <div class="icon-div">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </section>
+    <div id="Search-div">
+        <div class="main-inp">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div>
+                <input type="text" name="" id="Search" placeholder="Search...">
+            </div>
+        </div>
+    </div>
+    <section id="Sidebar">
+    <div class="sidebar-div">
+        <div class="close-div">
+            <span id="Sidebar-close">CLOSE <i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="items-div">
+            <div class="element">
+                <a href="index.html">HOME</a>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="element">
+                <a href="shop.html">SHOP</a>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="element">
+                <a href="blog.html">BLOG</a>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="element">
+                <a href="">PAGE</a>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+       @RenderBody()
+
+    <section id="Footer">
+        <div class="container">
+            <hr style="padding: 1rem 0; color: #706e6e;">
+            <div class="fot-al ">
+                <div class="first col-sm-12 col-12  col-lg-3 ">
+                    <h1>CONTACT US</h1>
+                    <p>Head Office : @settings.FirstOrDefault(s=>s.Key == "Head Office").Value</p>
+                    <p><span>Tel: </span>@settings.FirstOrDefault(s=>s.Key == "Tel").Value</p>
+                    <p><span>Email: </span>@settings.FirstOrDefault(s=>s.Key == "Email").Value</p>
+                    <div class="icon-div">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-rss"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="second col-sm-12 col-12 col-lg-3">
+                    <h1>Information</h1>
+                    <a href="">About Us</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <a href="">Services</a>
+                    <a href="">Sample Page</a>
+                    <a href="">Portfolio</a>
+                </div>
+                <div class="third col-sm-12 col-12 col-lg-3">
+                    <h1>My Account</h1>
+                    <a href="">About Us</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <a href="">Services</a>
+                    <a href="">Sample Page</a>
+                    <a href="">Portfolio</a>
+                </div>
+                <div class="fourth col-sm-12 col-12 col-lg-3">
+                 <h1>Top Rated Products</h1>
+                  <div class="fourth-pic">
+                     <div class="fourth-left">
+                        <div class="lef-img">
+                            <a href="">
+                                <img src="~/assets/images/sat.jpg" alt="">
+                            </a>
+                            <div class="fourth-right">
+                             <p>Accessories,Construction,Electronics,
+                                <br>
+                                Headphone
+                             </p>
+                             <h5>Donec Eu Animal</h5>
+                              <div>
+                                 <span class="fotprice">$74.00</span>
+                                </div>
+                             </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="fourth-pic">
+                    <div class="fourth-left">
+                       <div class="lef-img">
+                           <a href="">
+                               <img src="~/assets/images/sat2.jpg" alt="">
+                           </a>
+                           <div class="fourth-right">
+                            <p>Accessories,Construction,Electronics,
+                               <br>
+                               Headphone
+                            </p>
+                            <h5>Donec Eu Animal</h5>
+                             <div>
+                                <span class="fotprice">$74.00</span>
+                               </div>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Footerin-foteri">
+      <div class="container">
+        <hr style=" color: #706e6e;">
+        <div class="son">
+          <span>Home</span>
+          <span>Online Store</span>
+          <span>Promotion</span>
+          <span>PrimacyPolicy</span>
+          <span>Terms Of Use</span>
+          <span>Support</span>
+          <span>Contacts</span>
+        </div>
+        <hr style=" color: #706e6e;">
+        <div class="son-end">
+            <p> Copyright © 2018 <span>RoadThemes.</span> All Right Reserved.</p>
+            <p><img src="http://monsta.mallthemes.com/monsta-black/wp-content/uploads/2018/05/payment-300x28.png" alt=""></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="~/assets/slick.min.js"></script>
+    <script src="~/assets/js/cart-script.js"></script>
+    <script src="~/assets/js/addbasket.js"></script>
+    <script src="~/assets/js/scripttwo.js"></script>
+    <script src="~/assets/js/script.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.your-class').slick({
+            dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+
+          });
+        });
+      </script>
+  </body>
+</html>
+

@@ -1,0 +1,84 @@
+h1{
+    color:white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.endofblog{
+    button{
+        a{
+            color: white;
+            background: transparent;
+        }
+        border: 1px solid #7c7979;
+    }
+}
+.contblog{
+    display: flex;
+    justify-content: center;
+    span{
+        color: white;
+        margin: 0 7px;
+    }
+    a{
+        color: white;
+        &:hover{
+            color: rgb(144, 101, 22);
+            transition: .4s;
+
+        }
+    }
+    .specialforblog{
+        color: rgb(147, 99, 10);
+    }
+}
+#Continuebloga{
+    .imgbloga{
+        text-align: center;
+        padding-top: 1rem;
+        img{
+            width: 70%;
+        }
+    }
+    .hofcloga{
+        h3{
+            color: white;
+            font-family: auto;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    }
+    .allofbloga{
+        width: 90%;
+
+        margin-left: 4rem;
+       
+        .italicpostofbloga{
+            margin: 20px 0;
+            border-left: 4px solid orange;
+            em{
+                color: #7c7979;
+            }
+        }
+        p{
+            color: #a0a0a0;
+            font-family: initial;
+
+        }
+    }
+}
+.first{
+    h1{
+        margin-right: 14rem;
+    }
+    
+}
+.second{
+    h1{
+        margin-right: 14rem;
+    }
+}
+.third{
+    h1{
+        margin-right: 14rem;
+    }
+}
