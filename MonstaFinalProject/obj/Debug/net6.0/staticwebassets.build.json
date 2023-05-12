@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5xWBNwcWBLMOp/XaweTFOIVrtNeKSf5vzBZIZ71netk=",
+  "Hash": "od/tm3s7oJESNW76ZyrT79uj3QQNcVLJo827Tr9sYPQ=",
   "Source": "MonstaFinalProject",
   "BasePath": "_content/MonstaFinalProject",
   "Mode": "Default",
@@ -4503,6 +4503,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\boss\\js\\custom.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\js\\custom2.js",
+      "SourceId": "MonstaFinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\",
+      "BasePath": "_content/MonstaFinalProject",
+      "RelativePath": "boss/js/custom2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\boss\\js\\custom2.js"
     },
     {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\js\\dashboard\\1.js",

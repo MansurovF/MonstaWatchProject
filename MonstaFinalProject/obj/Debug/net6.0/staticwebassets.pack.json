@@ -1057,6 +1057,10 @@
       "PackagePath": "staticwebassets\\boss\\js\\custom.min.js"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\js\\custom2.js",
+      "PackagePath": "staticwebassets\\boss\\js\\custom2.js"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\js\\dashboard\\1.js",
       "PackagePath": "staticwebassets\\boss\\js\\dashboard\\1.js"
     },

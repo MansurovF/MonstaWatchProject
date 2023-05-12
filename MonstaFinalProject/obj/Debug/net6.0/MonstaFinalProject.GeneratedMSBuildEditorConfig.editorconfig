@@ -20,12 +20,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Brand/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Brand/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Brand/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_BrandIndexPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX0JyYW5kSW5kZXhQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_Layout.cshtml]
