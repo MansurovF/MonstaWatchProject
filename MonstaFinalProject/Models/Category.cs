@@ -12,6 +12,7 @@ namespace MonstaFinalProject.Models
         public Nullable<int> ParentId { get; set; }
         public Category? Parent { get; set; }
         [NotMapped]
+        public IFormFile? File { get; set; }
         public IEnumerable<Category>?  Children { get; set; }
         public IEnumerable<Product>? Products { get; set; }
     }

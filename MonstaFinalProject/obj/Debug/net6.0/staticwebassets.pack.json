@@ -137,6 +137,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\14blog.jpg"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\assets\\images\\20230514141910005_2b2547e8-7d05-4e72-a466-77a6192441fe.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\20230514141910005_2b2547e8-7d05-4e72-a466-77a6192441fe.jpg"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\assets\\images\\5blog.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\5blog.jpg"
     },
@@ -711,6 +715,18 @@
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\images\\favicon.png",
       "PackagePath": "staticwebassets\\boss\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\images\\imagesTask1.jpg",
+      "PackagePath": "staticwebassets\\boss\\images\\imagesTask1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\images\\imagesTask2.jpg",
+      "PackagePath": "staticwebassets\\boss\\images\\imagesTask2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\images\\imagesbanner-home1.1.jpg",
+      "PackagePath": "staticwebassets\\boss\\images\\imagesbanner-home1.1.jpg"
     },
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\MonstaFinalProject\\MonstaFinalProject\\wwwroot\\boss\\images\\logo-text.png",

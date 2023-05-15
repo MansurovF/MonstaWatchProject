@@ -61,7 +61,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Category", b =>
@@ -111,7 +111,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Color", b =>
@@ -153,7 +153,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors");
+                    b.ToTable("Colors", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Product", b =>
@@ -235,7 +235,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ColorId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.ProductImage", b =>
@@ -281,7 +281,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Setting", b =>
@@ -307,7 +307,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Slider", b =>
@@ -364,7 +364,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Category", b =>

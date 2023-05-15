@@ -36,12 +36,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xCcmFuZFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDYXRlZ29yeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDYXRlZ29yeVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Category/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDYXRlZ29yeVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDYXRlZ29yeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Category/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDYXRlZ29yeVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Color/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDb2xvclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Color/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDb2xvclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Color/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDb2xvclxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDb2xvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Color/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xDb2xvclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_BrandIndexPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX0JyYW5kSW5kZXhQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_ColorIndexPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX0NvbG9ySW5kZXhQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_Layout.cshtml]

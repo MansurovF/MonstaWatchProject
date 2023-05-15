@@ -1,4 +1,28 @@
 ﻿$(document).ready(function () {
+    let isMain = $('#IsMain').is(':checked');
+
+    if (isMain) {
+        $('.fileInput').removeClass('d-none');
+        $('.parentInput').addClass('d-none');
+    } else {
+        $('.fileInput').addClass('d-none');
+        $('.parentInput').removeClass('d-none');
+    }
+
+    $('#IsMain').click(function () {
+        let isMain = $(this).is(':checked');
+
+        if (isMain) {
+            $('.fileInput').removeClass('d-none');
+            $('.parentInput').addClass('d-none');
+        } else {
+            $('.fileInput').addClass('d-none');
+            $('.parentInput').removeClass('d-none');
+        }
+    })
+
+
+
     $(document).on('click', '.deleteBtn', function (e) {
         e.preventDefault();
         let url = $('.deleteBtn').attr('href');

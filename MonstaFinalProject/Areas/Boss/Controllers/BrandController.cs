@@ -104,7 +104,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             if (id == null) return BadRequest();
 
             Brand brand = await _context.Brands
-            .Include(b => b.Products.Where(p => p.IsDeleted == false  ))
+            .Include(b => b.Products.Where(p => p.IsDeleted == false ))
             .FirstOrDefaultAsync(b => b.Id == id && b.IsDeleted == false);
           
             if (brand == null) return NotFound();
