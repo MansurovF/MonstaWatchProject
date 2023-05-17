@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Interfaces;
 using MonstaFinalProject.Services;
+using MonstaFinalProject.Models;
+using MonstaFinalProject.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddNewtonsoftJson()

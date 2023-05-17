@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
+using MonstaFinalProject.Helpers;
 using MonstaFinalProject.Models;
+using MonstaFinalProject.ViewModels;
 using System.Security.Claims;
 
 namespace MonstaFinalProject.Areas.Boss.Controllers
@@ -18,13 +20,31 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(int pageIndex = 1)
         {
-            return View(await _context.Categories
+            IQueryable<Category> query = _context.Categories
                 .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
                 .Where(ca => ca.IsDeleted == false && ca.IsMain)
-                .ToListAsync());
+                .OrderByDescending(ca => ca.Id);
+
+            return View(PageNatedList<Category>.Create(query, pageIndex, 3, 8));
         }
+        //public async Task<IActionResult> Index(int pageIndex = 1)
+        //{
+        //    //IEnumerable<Category> categories = await _context.Categories
+        //    //    .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
+        //    //    .Where(ca => ca.IsDeleted == false && ca.IsMain)
+        //    //    .OrderByDescending(ca => ca.Id)
+        //    //    .ToListAsync();
+
+        //    //int totalCount = categories.Count();
+        //    //categories = categories.Skip((pageIndex -1)*3).Take(3).ToList();
+
+        //    return View();
+
+
+        //}
 
         [HttpGet]
         public async Task<IActionResult> Detail(int? id)
@@ -173,6 +193,8 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
                     return View();
                 }
 
+                //FileHelper.DeleteFile(dbCategory.Image,_env,"assets","images")
+
                 int lastIndex = category.File.FileName.LastIndexOf(".");
                 string name = category.File.FileName.Substring(lastIndex);
 
@@ -188,6 +210,8 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
                 //dbCategory.ParentId = null;
             }
+
+
             else
             {
                 if (category.ParentId != dbCategory.ParentId)
@@ -216,9 +240,11 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        //problem with delete
+
         [HttpGet]
         [ValidateAntiForgeryToken]
-
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return BadRequest();
@@ -232,13 +258,14 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
+
         public async Task<IActionResult> DeleteCategory(int? id)
         {
             if (id == null) return BadRequest();
 
             Category category = await _context.Categories
                .Include(ca => ca.Children.Where(ch => ch.IsDeleted == false))
-               .ThenInclude(cb => cb.Products.Where(p => p.IsDeleted == false))
+               .ThenInclude(ch => ch.Products.Where(p => p.IsDeleted == false))
                .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
                .FirstOrDefaultAsync(ca => ca.IsDeleted == false && ca.Id == id);
 

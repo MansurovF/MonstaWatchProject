@@ -2,15 +2,15 @@
 {
     public static class FileExtension
     {
-        //public static bool CheckFileContentType(this IFormFile file, string contentType)
-        //{
-        //    return file.ContentType != contentType;
-        //}
+        public static bool CheckFileContentType(this IFormFile file, string contentType)
+        {
+            return file.ContentType != contentType;
+        }
 
-        //public static bool CheckFileLenght(this IFormFile file, int lenght)
-        //{
-        //    return (file.Length / 1024) > lenght;
-        //}
+        public static bool CheckFileLenght(this IFormFile file, int lenght)
+        {
+            return (file.Length / 1024) > lenght;
+        }
 
         public static async Task<string> CreateFileAsync(this IFormFile file, IWebHostEnvironment env, params string[] folders)
         {
