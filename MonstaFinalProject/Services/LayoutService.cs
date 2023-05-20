@@ -18,5 +18,11 @@ namespace MonstaFinalProject.Services
 
             return settings;
         }
+        public async Task<IEnumerable<Category>> GetCategories()
+        {
+            return await _context.Categories
+                .Include(ca => ca.Parent)
+                .Where(ca => ca.IsDeleted == false && ca.IsMain).ToListAsync();
+        }
     }
 }

@@ -80,6 +80,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xQcm9kdWN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Product/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xQcm9kdWN0XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xQcm9kdWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Product/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xQcm9kdWN0XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_BrandIndexPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX0JyYW5kSW5kZXhQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,6 +112,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_ProductImagePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX1Byb2R1Y3RJbWFnZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_ValidationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,8 +128,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Basket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/BlogContinue/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0NvbnRpbnVlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Error/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Shared/_Layout.cshtml]
@@ -114,6 +174,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Shared/_ProductListPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0TGlzdFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Shop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/Wishlist/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Views/_ViewImports.cshtml]

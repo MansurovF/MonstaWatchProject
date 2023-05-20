@@ -183,7 +183,7 @@
                     <li class="nav-label first"></li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon icon-single-04"></i><span class="nav-text">Brands</span>
+                            <i class="icon icon-single-04"></i><span class="nav-text">Brand</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a asp-area="boss" asp-controller="Brand" asp-action="index">Brands</a></li>
@@ -192,7 +192,7 @@
                     <li class="nav-label first"></li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon icon-single-04"></i><span class="nav-text">Colors</span>
+                            <i class="icon icon-single-04"></i><span class="nav-text">Color</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a asp-area="boss" asp-controller="Color" asp-action="index">Colors</a></li>
@@ -202,10 +202,19 @@
                     <li class="nav-label first"></li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon icon-single-04"></i><span class="nav-text">Categories</span>
+                            <i class="icon icon-single-04"></i><span class="nav-text">Category</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a asp-area="boss" asp-controller="Category" asp-action="index">Categories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label first"></li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon icon-single-04"></i><span class="nav-text">Product</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a asp-area="boss" asp-controller="Product" asp-action="index">Products</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -265,7 +274,7 @@
 
     <script src="~/boss/vendor/circle-progress/circle-progress.min.js"></script>
     <script src="~/boss/vendor/chart.js/Chart.bundle.min.js"></script>
-
+    @RenderSection("Scripts",false)
     <script src="~/boss/vendor/gaugeJS/dist/gauge.min.js"></script>
 
     <!--  flot-chart js -->

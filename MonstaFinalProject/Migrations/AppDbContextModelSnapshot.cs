@@ -61,7 +61,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Category", b =>
@@ -111,7 +111,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Color", b =>
@@ -153,7 +153,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors", (string)null);
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Product", b =>
@@ -195,7 +195,8 @@ namespace MonstaFinalProject.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("HoverImage")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<bool>("IsBestSelling")
                         .HasColumnType("bit");
@@ -210,7 +211,8 @@ namespace MonstaFinalProject.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("MainImage")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
@@ -235,7 +237,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ColorId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.ProductImage", b =>
@@ -281,7 +283,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Setting", b =>
@@ -307,7 +309,7 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings", (string)null);
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Slider", b =>
@@ -364,13 +366,13 @@ namespace MonstaFinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders", (string)null);
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("MonstaFinalProject.Models.Category", b =>
                 {
                     b.HasOne("MonstaFinalProject.Models.Category", "Parent")
-                        .WithMany()
+                        .WithMany("Children")
                         .HasForeignKey("ParentId");
 
                     b.Navigation("Parent");
@@ -415,6 +417,8 @@ namespace MonstaFinalProject.Migrations
 
             modelBuilder.Entity("MonstaFinalProject.Models.Category", b =>
                 {
+                    b.Navigation("Children");
+
                     b.Navigation("Products");
                 });
 

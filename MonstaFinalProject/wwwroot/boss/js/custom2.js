@@ -1,4 +1,17 @@
 ﻿$(document).ready(function () {
+
+    $(document).on('click', 'deleteImage', function (e) {
+        e.preventDefault();
+
+        let url = $(this).attr('href')
+
+        fetch(url)
+            .then(res => res.text())
+            .then(data => {
+                $('.imageContainer').html(data)
+            })
+    })
+
     let isMain = $('#IsMain').is(':checked');
 
     if (isMain) {

@@ -16,8 +16,9 @@ namespace MonstaFinalProject.Models
         public double Price { get; set; }
         [StringLength(1000)]
         public string? Description { get; set; }
+        [StringLength(255)]
         public string? MainImage { get; set; }
-        
+        [StringLength(255)]
         public string? HoverImage { get; set; }
         public bool IsFeatured { get; set; }
         public bool IsBestSelling { get; set; }
@@ -34,5 +35,12 @@ namespace MonstaFinalProject.Models
         public Color? Color { get; set; }
 
         public List<ProductImage>? ProductImages { get; set; }
+
+        [NotMapped]
+        public IFormFile? MainFile { get; set; }
+        [NotMapped]
+        public IFormFile? HoverFile { get; set; }
+        [NotMapped]
+        public IEnumerable<IFormFile>? Files { get; set; }
     }
 }

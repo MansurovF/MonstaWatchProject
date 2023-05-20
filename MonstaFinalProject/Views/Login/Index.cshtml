@@ -1,0 +1,28 @@
+﻿<div class="headoflogin">
+        <div class="container">
+            <h1>My Account</h1>
+            <div class="contentabout">
+            <a asp-controller="home">Home</a>
+                <span style="color: white; margin: 0 10px;">></span>
+            <a asp-controller="login"><span>My Account</span></a>
+            </div>
+            <hr style="margin: 20px 47px 0; color: #a3a3a3;">
+        </div> 
+    </div>
+    <section id="Loginsys">
+        <div class="container">
+            <h3>
+                Login
+            </h3>
+            <div class="alllogin">
+                <form class="login-form">     
+                  <p>Email address <i class="fa-solid fa-star-of-life"></i> <br><input type="email" id="email"  minlength="5" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/></p>
+                  <p>Password <i class="fa-solid fa-star-of-life"></i><br><input type="password"  minlength="4" required/></p>
+                  <p><button type="submit">Login</button>
+                    <input class="remembermeee" type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+                 </p>
+                </form>
+            </div>
+            <hr style="margin: 80px 47px 0 ; color: #a3a3a3;">
+        </div>
+    </section>

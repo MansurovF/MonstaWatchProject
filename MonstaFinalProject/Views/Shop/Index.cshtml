@@ -1,0 +1,664 @@
+﻿<div class="shopheader">
+    <a asp-controller="home">Home</a>
+    <span>></span>
+    <a asp-controller="shop">Shop</a>
+    <span><hr style="margin: 30px 27px;"></span>
+</div>
+<section id="Main">
+    <div class="container px-lg-50px px-sm-15px px-md-15px px-15px">
+        <div class="row">
+            <div class="left col-xl-3 col-lg-3 col-md-12 col-12">
+                <div class="hidden-close">
+                    <button id="closeproductsidebar">Close <i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="categories">
+                    <h3>CATEGORIES</h3>
+                    <div class="list">
+                        <div class="item">
+                            <button type="button"> <a href="/product.html">Classic</a></button>
+                        </div>
+                        <div class="item">
+                            <button type="button"> <a href="/product.html">Fashion</a></button>
+                        </div>
+                        <div class="item">
+                            <button type="button"> <a href="/product.html">Digital Watches</a></button>
+                        </div>
+                        <div class="item">
+                            <button type="button"> <a href="/product.html">Quartz Watches</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price">
+                    <h3>PRICE</h3>
+                    <div class="range">
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="100" max="850" value="100" step="1">
+                            <input type="range" class="range-max" min="100" max="850" value="850" step="1">
+                        </div>
+                        <div class="price-input">
+                            <span style="color: #868686;">Range : </span>
+                            <span class="value">$100</span>
+                            <span> - </span>
+                            <span class="value">$850</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopbrands">
+                    <h3>Brands</h3>
+                    <div class="item">
+                        <label class="ctgname">Rolex</label>
+                        <div class="count">(5)</div>
+                    </div>
+                    <div style="margin: 10px 0 5px 0 ;" class="item">
+                        <label class="ctgname">Patek Philippe</label>
+                        <div class="count">(3)</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="shopbrands-2">
+                    <h3>Color</h3>
+                    <hr>
+                    <div class="item">
+                        <label class="ctgname">Gold</label>
+                        <div class="count">(3)</div>
+                    </div>
+                    <div class="item">
+                        <label class="ctgname">Green</label>
+                        <div class="count">(2)</div>
+                    </div>
+                    <div class="item">
+                        <label class="ctgname">White</label>
+                        <div class="count">(1)</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <h3>FEATURE PRODUCT</h3>
+                    <div class="size-div">
+                        <a href="product.html">
+                            <div class="item">
+                                <div class="img-div">
+                                    <img src="~/assets/images/saats3.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="rating">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="title">
+                                        <a href="">Donec a enim a ipsum loborti...</a>
+                                    </div>
+                                    <div class="price-div">
+                                        <p>$525.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="product.html">
+                            <div class="item">
+                                <div class="img-div">
+                                    <img src="~/assets/images/saats5.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="rating">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="title">
+                                        <a href="">Donec a enim a ipsum loborti...</a>
+                                    </div>
+                                    <div class="price-div">
+                                        <p>$205.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="product.html">
+                            <div class="item">
+                                <div class="img-div">
+                                    <img src="~/assets/images/saats7.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="rating">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="title">
+                                        <a href="">Donec a enim a ipsum loborti...</a>
+                                    </div>
+                                    <div class="price-div">
+                                        <p>$325.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="product.html">
+                            <div class="item" style="border-bottom: none;">
+                                <div class="img-div">
+                                    <img src="~/assets/images/saats8.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="rating">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="title">
+                                        <a href="">Donec a enim a ipsum loborti...</a>
+                                    </div>
+                                    <div class="price-div">
+                                        <p>$225.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right col-xl-9 col-lg-9 col-md-12 col-12">
+                <div class="all-div">
+                    <div class="sag">
+                        <i id="openproductsidebar" class="fa-solid fa-sliders"></i>
+                        <p id="showing">Showing 12 results</p>
+                    </div>
+                    <div class="sol">
+                        <div class="icon-div">
+                            <i id="iki" class="fa-solid fa-grip-vertical"></i>
+                            <i id="bir" class="fa-solid fa-list"></i>
+                        </div>
+                        <div class="sortdd">
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">Default Sorting <i class="fa-solid fa-caret-down"></i></button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="">Default Sorting</a>
+                                    <a href="">Sort By Popularity</a>
+                                    <a href="">Sort By Avergae Rating</a>
+                                    <a href="">Sort By Latest</a>
+                                    <a href="">Sort By Price: Low To High</a>
+                                    <a href="">Sort By Price: High To Low</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="products" class="row">
+                    <div style="display: flex;" class="your-classes">
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="display: flex;" class="your-classes">
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="display: flex;" class="your-classes">
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="width: 25%;" class="slider-item">
+                            <a asp-controller="product">
+                                <div class="box">
+                                    <div class="img-div">
+                                        <img src="~/assets/images/sat.jpg" alt="...">
+                                        <img src="~/assets/images/sat2.jpg" alt="...">
+                                        <div class="bag ">
+                                            <div class="cart-ico">
+                                                <div class="heaart">
+                                                    <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                                </div>
+                                                <div class="cart">
+                                                    <button><a><span>Add to Cart</span></a></button>
+                                                </div>
+                                                <div class="compare">
+                                                    <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body-div">
+                                        <div class="rating2">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <br>
+                                        </div>
+                                        <div class="rating">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h5 class="card-title">Donec eu furniture</h5>
+                                            <div class="price-prod"><span>$74.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
