@@ -1610,15 +1610,16 @@ hr{
                             align-items: center;
                             margin: 5px;
                             color: #a3a3a3;
-                            button{
+                            a{
                                 border: none;
                                 span{
-                                    font-size: 14px;
+                                    font-size: 34px;
                                     color: #ada9a9;
                                 }
                                 &:hover{
+                                    
                                     span{
-                                        color: rgb(161, 111, 18);
+                                       
                                         transition: .5s;
                                     }
                                 }

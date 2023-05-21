@@ -62,6 +62,7 @@
                     console.log(url)
                     let url2 = "/" + url.split('/')[1] + "/sectionbasket"
                     console.log(url2)
+                    conlole.log("salammm")
                     fetch(url2)
                         .then(res2 => {
                             return res2.text()
@@ -82,6 +83,7 @@
                     console.log(url)
                     let url2 = "/" + url.split('/')[1] + "/refreshbasketsection"
                     console.log(url2)
+                    
                     fetch(url2)
                         .then(res2 => {
                             return res2.text()

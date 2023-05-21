@@ -3,7 +3,7 @@ $(document).ready(function(){
     const priceInput = document.querySelectorAll(".price-input .value");
     const range = document.querySelector(".slider .progress");
     let priceGap = 0;
-
+ 
     rangeInput.forEach(input =>{
         input.addEventListener("input", e =>{
             let minVal = parseInt(rangeInput[0].value);
@@ -23,6 +23,7 @@ $(document).ready(function(){
             minPrice = minVal;
             maxPrice = maxVal;
         });
+   
         
         // input.addEventListener('change', function() {
         //     fetch('./products.json')
@@ -101,6 +102,13 @@ $(document).ready(function(){
             }
         })
     })
+    //const range = document.querySelector(".val");
+    //range.addEventListener("change", () => {
+    //    const min = document.querySelector("#min").value;
+    //    const max = document.querySelector("#max").value;
+    //    console.log("min" + min + "max" + max);
+      
+    //})
 
     // let productrow = document.querySelector('#products');
     // let productstring = '';
