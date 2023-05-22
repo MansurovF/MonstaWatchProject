@@ -254,6 +254,8 @@ C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\M
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.AssemblyInfo.cs
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.RazorAssemblyInfo.cache
+C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.RazorAssemblyInfo.cs
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\staticwebassets\msbuild.MonstaFinalProject.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\staticwebassets\msbuild.build.MonstaFinalProject.props
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MonstaFinalProject.props
@@ -268,5 +270,3 @@ C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\r
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.pdb
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\ref\MonstaFinalProject.dll
-C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.RazorAssemblyInfo.cache
-C:\Users\LENOVO\Desktop\MonstaFinalProject\MonstaFinalProject\obj\Debug\net6.0\MonstaFinalProject.RazorAssemblyInfo.cs

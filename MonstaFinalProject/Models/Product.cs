@@ -33,6 +33,7 @@ namespace MonstaFinalProject.Models
         public Brand? Brand { get; set; }
         public int? ColorId { get; set; }
         public Color? Color { get; set; }
+        //public IEnumerable<Basket>? Baskets { get; set; }
 
         public List<ProductImage>? ProductImages { get; set; }
 

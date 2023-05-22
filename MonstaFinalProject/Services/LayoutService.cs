@@ -2,15 +2,18 @@
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Interfaces;
 using MonstaFinalProject.Models;
+using MonstaFinalProject.ViewModels.BasketViewModels;
 
 namespace MonstaFinalProject.Services
 {
     public class LayoutService: ILayoutService
     {
         private readonly AppDbContext _context;
-        public LayoutService(AppDbContext context)
+        //private readonly IHttpContextAccessor _httpContextAccessor;
+        public LayoutService(AppDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            //_httpContextAccessor = httpContextAccessor;
         }
         public async Task<IDictionary<string, string>> GetSettings()
         {
@@ -24,5 +27,15 @@ namespace MonstaFinalProject.Services
                 .Include(ca => ca.Parent)
                 .Where(ca => ca.IsDeleted == false && ca.IsMain).ToListAsync();
         }
+
+        public Task<List<BasketVM>> GetBaskets()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public Task<List<BasketVM>> GetBaskets()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

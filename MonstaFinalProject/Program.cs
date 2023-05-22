@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 var app = builder.Build();
 
+builder.Services.AddHttpContextAccessor();
 
 
 app.UseStaticFiles();

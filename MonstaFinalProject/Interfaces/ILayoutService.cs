@@ -1,4 +1,5 @@
 ﻿using MonstaFinalProject.Models;
+using MonstaFinalProject.ViewModels.BasketViewModels;
 
 namespace MonstaFinalProject.Interfaces
 {
@@ -6,5 +7,6 @@ namespace MonstaFinalProject.Interfaces
     {
         Task<IDictionary<string, string>> GetSettings();
         Task<IEnumerable<Category>> GetCategories();
+        Task<List<BasketVM>> GetBaskets();
     }
 }
