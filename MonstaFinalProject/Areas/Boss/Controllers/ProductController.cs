@@ -385,6 +385,22 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) return BadRequest();
+            Product product = await _context.Products
+             .Include(p => p.ProductImages.Where(pi => pi.IsDeleted == false))
+             .Include(p => p.Color)
+             .Include(p => p.Brand)
+             .Include(p => p.Category)
+             .FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
+            if (product == null) return NotFound();
+            ViewBag.Brands = await _context.Brands.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Categories = await _context.Categories.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Colors = await _context.Colors.Where(b => b.IsDeleted == false).ToListAsync();
+            return View(product);
+        }
 
     }
 }

@@ -16,5 +16,7 @@
         </div> 
     </div>
 <main class="cart-page cart-page-main-block inner-page-sec-padding-bottom cart-main-checkoutpage">
-    @await Html.PartialAsync("_BasketIndexPartial", Model)
+    <div class="basketDetails">
+        @await Html.PartialAsync("_BasketIndexPartial", Model)
+    </div>
 </main>

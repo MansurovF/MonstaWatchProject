@@ -105,28 +105,36 @@ namespace MonstaFinalProject.Controllers
 
         public async Task<IActionResult> RemoveBasket(int? id)
         {
+            
+
             if (id == null) return BadRequest();
             if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
             string cookie = HttpContext.Request.Cookies["basket"];
-
-            List<BasketVM> basketVMs = null;
-
+            List<BasketVM> basketVMs = new List<BasketVM>();
             if (!string.IsNullOrWhiteSpace(cookie))
             {
                 basketVMs = JsonConvert.DeserializeObject<List<BasketVM>>(cookie);
-
                 if (basketVMs.Exists(p => p.Id == id))
                 {
-                    if (basketVMs.Find(b => b.Id == id).Count > 1)
+                    BasketVM dbBasket = basketVMs.Find(p => p.Id == id);
+
+                    if (dbBasket.Count == 1)
                     {
-                        basketVMs.Find(b => b.Id == id).Count -= 1;
+                        basketVMs.Remove(dbBasket);
+
                     }
+                    else
+                    {
+                        dbBasket.Count -= 1;
+                    }
+
+                }
+                else
+                {
+                    return BadRequest();
                 }
             }
-            else
-            {
-                return BadRequest();
-            }
+
             foreach (BasketVM basketVM in basketVMs)
             {
                 Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == basketVM.Id);
@@ -143,6 +151,68 @@ namespace MonstaFinalProject.Controllers
 
             return PartialView("_BasketIndexPartial", basketVMs);
         }
+
+        public async Task<IActionResult> DeleteBasket(int? id)
+        {
+            if (id == null) return BadRequest();
+            if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
+            string cookie = HttpContext.Request.Cookies["basket"];
+            List<BasketVM> basketVMs = new List<BasketVM>();
+            if (!string.IsNullOrWhiteSpace(cookie))
+            {
+                basketVMs = JsonConvert.DeserializeObject<List<BasketVM>>(cookie);
+                if (basketVMs.Exists(p => p.Id == id))
+                {
+                    BasketVM dbBasket = basketVMs.Find(p => p.Id == id);
+                    if (dbBasket.Count >= 1)
+                    {
+                        basketVMs.Remove(dbBasket);
+                    }
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            cookie = JsonConvert.SerializeObject(basketVMs);
+            HttpContext.Response.Cookies.Append("basket", cookie);
+            foreach (BasketVM basketVM in basketVMs)
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == basketVM.Id);
+                if (product != null)
+                {
+                    basketVM.Title = product.Title;
+                    basketVM.Price =  product.Price;
+                    basketVM.Shipping = product.Shipping;
+                    basketVM.Image = product.MainImage;
+                }
+            }
+            return PartialView("_BasketIndexPartial", basketVMs);
+        }
+
+
+        public async Task<IActionResult> BasketDetails()
+        {
+            string basket = HttpContext.Request.Cookies["basket"];
+
+            List<BasketVM> basketVMs = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
+
+            foreach (BasketVM basketVM in basketVMs)
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == basketVM.Id);
+
+                if (product != null)
+                {
+                    basketVM.Title = product.Title;
+                    basketVM.Price = product.Price;
+                    basketVM.Image = product.MainImage;
+                    basketVM.Shipping = product.Shipping;
+                }
+            }
+
+            return PartialView("_BasketIndexPartial", basketVMs);
+        }
+
         public async Task<IActionResult> MainBasket()
         {
             string cookie = HttpContext.Request.Cookies["basket"];

@@ -15,7 +15,7 @@
                 <a asp-action="index" asp-controller="category" asp-area="boss" class="btn btn-primary">Go To Home</a>
             </div>
             <div class="col-lg-2 " style="text-align:end">
-                <a asp-action="index" asp-controller="deletecategory" asp-area="boss" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                <a asp-area="boss" asp-controller="category" asp-action="deletecategory" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>

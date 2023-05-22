@@ -37,47 +37,58 @@ namespace MonstaFinalProject.Controllers
                         wishlistVM.Title = product.Title;
                         wishlistVM.Price = product.Price;
                         wishlistVM.Image = product.MainImage;
-                        wishlistVM.Shipping = product.Shipping;
                     }
                 }
             }
-
+            ViewBag.Wishlist = cookie;
             return View(wishlistVMs);
         }
 
-        public async Task<IActionResult> AddWish(int? Id)
+        public async Task<IActionResult> WishlistDetails()
         {
-            if (Id == null) return BadRequest();
-
-            if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == Id)) return NotFound();
-
             string cookie = HttpContext.Request.Cookies["wishlist"];
 
-            List<WishlistVM> wishlistVMs = new();
+            List<WishlistVM> wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
 
+            foreach (WishlistVM wishlistVM in wishlistVMs)
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
+
+                if (product != null)
+                {
+                    wishlistVM.Title = product.Title;
+                    wishlistVM.Price = product.Price;
+                    wishlistVM.Image = product.MainImage;
+                }
+            }
+            ViewBag.Wishlist = cookie;
+            return PartialView("_WishlistIndexPartial", wishlistVMs);
+        }
+
+        public async Task<IActionResult> AddWishlist(int? id)
+        {
+            if (id == null) return BadRequest();
+            if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
+            List<WishlistVM> wishlistVMs = new List<WishlistVM>();
+            string cookie = HttpContext.Request.Cookies["wishlist"];
             if (string.IsNullOrWhiteSpace(cookie))
             {
                 wishlistVMs = new List<WishlistVM>
                 {
-                    new WishlistVM {Id = (int)Id}
+                    new WishlistVM{Id=(int)id}
                 };
             }
             else
             {
                 wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
-                if (wishlistVMs.Exists(p => p.Id == Id))
+                if (!wishlistVMs.Exists(b => b.Id == id))
                 {
-                    wishlistVMs.Find(b => b.Id == Id);
+                    wishlistVMs.Add(new WishlistVM { Id = (int)id });
                 }
-                else
-                {
-                    wishlistVMs.Add(new WishlistVM { Id = (int)Id });
-                };
             }
 
             cookie = JsonConvert.SerializeObject(wishlistVMs);
             HttpContext.Response.Cookies.Append("wishlist", cookie);
-
             foreach (WishlistVM wishlistVM in wishlistVMs)
             {
                 Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
@@ -87,135 +98,81 @@ namespace MonstaFinalProject.Controllers
                     wishlistVM.Price = product.Price;
                     wishlistVM.Image = product.MainImage;
                 }
-
             }
-
+            ViewBag.Wishlist = cookie;
             return PartialView("_WishlistIndexPartial", wishlistVMs);
         }
-
         //public async Task<IActionResult> DeleteWishlist(int? id)
         //{
         //    if (id == null) return BadRequest();
-
         //    if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
-
         //    string cookie = HttpContext.Request.Cookies["wishlist"];
-
-        //    List<WishlistVM> wishlistVMs = null;
-
+        //    List<WishlistVM> wishlistVMs = new List<WishlistVM>();
         //    if (!string.IsNullOrWhiteSpace(cookie))
         //    {
-        //        wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
-
+        //        wishlistVMs = JsonConvert.DeserializeObject<List<BasketVM>>(cookie);
         //        if (wishlistVMs.Exists(p => p.Id == id))
         //        {
-        //            wishlistVMs.Remove(wishlistVMs.FirstOrDefault(b => b.Id == id));
-
+        //            WishlistVM wishlistVM = wishlistVMs.Find(p => p.Id == id);
+        //            if (wishlistVM.Count >= 1)
+        //            {
+        //                wishlistVMs.Remove(dbBasket);
+        //            }
         //        }
         //        else
         //        {
         //            return BadRequest();
         //        }
         //    }
-
+        //    cookie = JsonConvert.SerializeObject(wishlistVMs);
+        //    HttpContext.Response.Cookies.Append("wishlist", cookie);
         //    foreach (WishlistVM wishlistVM in wishlistVMs)
         //    {
         //        Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
-
         //        if (product != null)
         //        {
         //            wishlistVM.Title = product.Title;
-        //            wishlistVM.Price = product.DiscountedPrice > 0 ? product.DiscountedPrice : product.Price;
+        //            wishlistVM.Price = product.Price;
         //            wishlistVM.Image = product.MainImage;
         //        }
         //    }
-
-        //    cookie = JsonConvert.SerializeObject(wishlistVMs);
-        //    HttpContext.Response.Cookies.Append("wishlist", cookie);
-
-        //    return PartialView("_WishlistMainPartial", wishlistVMs);
+        //    return PartialView("_BasketIndexPartial", wishlistVMs);
         //}
 
-        //public async Task<IActionResult> AddWishlist(int? id)
-        //{
-        //    if (id == null) return BadRequest();
-
-        //    if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
-
-
-        //    string cookie = HttpContext.Request.Cookies["wishlist"];
-
-        //    List<WishlistVM> wishlistVMs = null;
-
-        //    if (string.IsNullOrWhiteSpace(cookie))
-        //    {
-        //        wishlistVMs = new List<WishlistVM>()
-        //        {
-        //            new WishlistVM
-        //            {
-        //                Id = (int)id,
-        //            }
-        //        };
-        //    }
-        //    else
-        //    {
-        //        wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
-
-        //        if (!wishlistVMs.Exists(p => p.Id == id))
-        //        {
-        //            wishlistVMs.Add(new WishlistVM { Id = (int)id });
-        //        }
-
-        //    }
-
-        //    if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
-        //    {
-        //        AppUser appUser = await _userManager.Users
-        //            .Include(u => u.Wishlists.Where(b => b.IsDeleted == false))
-        //            .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
-
-        //        if (appUser.Wishlists != null && appUser.Wishlists.Count() > 0)
-        //        {
-        //            if (!appUser.Wishlists.Any(b => b.ProductId == id))
-        //            {
-        //                Wishlist wishlist = new Wishlist
-        //                {
-        //                    ProductId = id,
-        //                };
-
-        //                appUser.Wishlists.Add(wishlist);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Wishlist wishlist = new Wishlist
-        //            {
-        //                ProductId = id,
-        //            };
-
-        //            appUser.Wishlists.Add(wishlist);
-        //        }
-
-        //        await _context.SaveChangesAsync();
-        //    }
-
-        //    cookie = JsonConvert.SerializeObject(wishlistVMs);
-        //    HttpContext.Response.Cookies.Append("wishlist", cookie);
-
-        //    //foreach (WishlistVM wishlistVM in wishlistVMs)
-        //    //{
-        //    //    Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
-
-        //    //    if (product != null)
-        //    //    {
-        //    //        wishlistVM.Title = product.Title;
-        //    //        wishlistVM.Price = product.DiscountedPrice > 0 ? product.DiscountedPrice : product.Price;
-        //    //        wishlistVM.Image = product.MainImage;
-        //    //        wishlistVM.ExTax = product.ExTax;
-        //    //    }
-        //    //}
-
-        //    return Ok();
-        //}
+        public async Task<IActionResult> RemoveWishlist(int? id)
+        {
+            if (id == null) return BadRequest();
+            if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
+            string cookie = HttpContext.Request.Cookies["wishlist"];
+            List<WishlistVM> wishlistVMs = new List<WishlistVM>();
+            if (!string.IsNullOrWhiteSpace(cookie))
+            {
+                wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
+                if (wishlistVMs.Exists(p => p.Id == id))
+                {
+                    WishlistVM dbWishlist = wishlistVMs.Find(p => p.Id == id);
+                    wishlistVMs.Remove(dbWishlist);
+                }
+                else
+                {
+                    
+                    return BadRequest();
+                }
+            }
+            cookie = JsonConvert.SerializeObject(wishlistVMs);
+            HttpContext.Response.Cookies.Append("wishlist", cookie);
+            foreach (WishlistVM wishlistVM in wishlistVMs)
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
+                if (product != null)
+                {
+                    wishlistVM.Title = product.Title;
+                    wishlistVM.Price = product.Price;
+                    wishlistVM.Image = product.MainImage;
+                }
+            }
+            ViewBag.Wishlist = cookie;
+            return PartialView("_WishlistIndexPartial", wishlistVMs);
+        }
     }
 }

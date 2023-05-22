@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using MonstaFinalProject.ViewModels.BasketViewModels;
 using MonstaFinalProject.ViewModels.WishlistViewModels;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity;
 
 namespace MonstaFinalProject.Services
 {
@@ -77,6 +78,36 @@ namespace MonstaFinalProject.Services
                 //}
             }
             return new List<BasketVM>();
+        }
+
+        public async Task<List<WishlistVM>> GetWishlists()
+        {
+            List<WishlistVM> wishlistVMs = new List<WishlistVM>();
+
+            string cookie = _httpcontextAccessor.HttpContext.Request.Cookies["wishlist"];
+
+            if (!string.IsNullOrWhiteSpace(cookie))
+            {
+                wishlistVMs = JsonConvert.DeserializeObject<List<WishlistVM>>(cookie);
+
+                if (wishlistVMs != null && wishlistVMs.Count > 0)
+                {
+                    foreach (WishlistVM wishlistVM in wishlistVMs)
+                    {
+                        Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == wishlistVM.Id);
+                        if (product != null)
+                        {
+                            wishlistVM.Title = product.Title;
+                            wishlistVM.Price = product.Price;
+                            wishlistVM.Image = product.MainImage;
+                            wishlistVM.Shipping = product.Shipping;
+                        }
+                    }
+                    return wishlistVMs;
+                }
+            }
+
+            return new List<WishlistVM>();
         }
     }
 }

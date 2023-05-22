@@ -1,24 +1,27 @@
 ﻿@model IEnumerable<Product>
-
+@inject ILayoutService layoutService;
+@{
+    List<WishlistVM> wishlistVMs = await layoutService.GetWishlists();
+}
 <div class="pr-fr">
     @for (int i = 0; i < (int)Math.Ceiling((decimal)Model.Count() / 4); i++)
     {
         <div class="your-class2">
-            @foreach (var item in Model)
+            @foreach (Product product in Model)
             {
                 <div class="slider-item">
                     <a asp-controller="shop">
                         <div class="box">
                             <div class="img-div">
-                                <img src="~/assets/images/@item.MainImage" alt="...">
-                                <img src="~/assets/images/@item.HoverImage" alt="...">
+                                <img src="~/assets/images/@product.MainImage" alt="...">
+                                <img src="~/assets/images/@product.HoverImage" alt="...">
                                 <div class="bag ">
                                     <div class="cart-ico">
                                         <div class="heaart">
-                                            <button><a><i class="fa-solid fa-heart"></i></a></button>
+                                            <a class="addWishlist" asp-action="addWishlist" asp-controller="wishlist" asp-route-id="@product.Id"><i class="fa-solid fa-heart"></i></a>
                                         </div>
                                         <div class="cart">
-                                            <a class="addbasket" asp-controller="basket" asp-action="addbasket" asp-route-Id="@item.Id"><span>Add to Cart</span></a>
+                                            <a class="addbasket" asp-controller="basket" asp-action="addbasket" asp-route-Id="@product.Id"><span>Add to Cart</span></a>
                                         </div>
                                         <div class="compare">
                                             <button><a href=""><i class="fa-solid fa-sliders"></i></a></button>
@@ -38,7 +41,7 @@
                                 <div class="rating">
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                     <h5 class="card-title">Donec eu furniture</h5>
-                                    <div class="price-prod"><span id="ytprice">$74.00</span></div>
+                                    <div class="price-prod"><span id="ytprice">$@product.Price</span></div>
                                 </div>
                             </div>
                         </div>

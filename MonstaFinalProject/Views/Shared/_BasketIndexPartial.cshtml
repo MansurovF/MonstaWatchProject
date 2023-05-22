@@ -28,21 +28,21 @@
                                         <td class="pro-quantity">
                                             <div class="pro-qty">
                                                 <div class=" inputer count-input-block">
-                                                    <a  class="minus" asp-controller="basket" asp-route-id="@basketVM.Id" asp-action="minus">
-                                                        <button type="button" class="minus">
+                                                    <a  class="minus" asp-controller="basket" asp-route-id="@basketVM.Id" asp-action="RemoveBasket">
+                                                        <button type="submit" class="minus">
                                                         <i class="fa-solid fa-minus"></i>
                                                         </button>
                                                     </a>
                                                     <input style="width: 50px; height: 37px; padding-left: 18px;" type="text" value="@basketVM.Count"/>
-                                                    <a class="plus"  asp-controller="basket" asp-route-id="@basketVM.Id" asp-action="plus">
-                                                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                                                    <a class="plus" asp-action="AddBasket"  asp-controller="basket"  asp-route-id="@basketVM.Id" asp-action="plus">
+                                                        <button type="submit" class="plus"><i class="fa-solid fa-plus"></i></button>
                                                     </a>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="pro-subtotal"><span>$@(basketVM.Price*basketVM.Count)</span></td>
                                         <td id="pro-remove">
-                                            <a class="rmvproduct" asp-action="removebasket" asp-controller="basket" asp-route-id="@basketVM.Id" ><i class="fa-regular fa-trash-can  "></i></a>
+                                            <a class="rmvproduct" asp-action="DeleteBasket" asp-controller="basket" asp-route-id="@basketVM.Id" ><i class="fa-regular fa-trash-can  "></i></a>
                                          </td>
                                     </tr>
                                 }
