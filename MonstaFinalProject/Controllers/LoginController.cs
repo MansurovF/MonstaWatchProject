@@ -12,13 +12,6 @@ namespace MonstaFinalProject.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IConfiguration _con;
 
-        //public LoginController()
-        //{
-        //}
-
-        //private readonly SmtpSetting _smtpSetting;
-
-
         public LoginController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager, IConfiguration con)
         {
@@ -65,13 +58,6 @@ namespace MonstaFinalProject.Controllers
             }
 
             return RedirectToAction("index", "home");
-
-            //if (!appUser.IsActive)
-            //{
-            //    ModelState.AddModelError("", "Hesabiniz DeActivedi");
-            //    return View(loginVM);
-            //}
-
 
         }
     }

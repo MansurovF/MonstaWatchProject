@@ -18,6 +18,15 @@
                 <div class="categories">
                     <h3>CATEGORIES</h3>
                     <div class="list">
+                        @*@if (Model.Categories != null && Model.Categories.Count() > 0)
+                        {
+                            @foreach (Category parent in Model.Categories)
+                            {
+                                <div class="item">
+                                    <button type="button"> <a class="categorybtn" asp-action="filter" asp-controller="product" asp-route-categoryId="@cateogry.Id">@parent.Name</a></button>
+                                </div>
+                            }
+                        }*@
                         <div class="item">
                             <button type="button"> <a href="/product.html">Classic</a></button>
                         </div>
@@ -31,6 +40,7 @@
                             <button type="button"> <a href="/product.html">Quartz Watches</a></button>
                         </div>
                     </div>
+
                 </div>
                 <div class="price">
                     <h3>PRICE</h3>
@@ -39,13 +49,11 @@
                             <div class="progress"></div>
                         </div>
                         <div class="range-input">
-                            <input  type="range" id="min" class="range-min" min="100" max="850" value="value=" @((int)Math.Ceiling((decimal)Model.Products.Min(p => p.Price)))" step="1" />
+                            <input type="range" id="min" class="range-min" min="100" max="850" value="value=" @((int)Math.Ceiling((decimal)Model.Products.Min(p => p.Price)))" step="1" />
                             <input type="range" id="max" class="range-max" min="100" max="850" value="value=" @((int)Math.Ceiling((decimal)Model.Products.Max(p => p.Price)))" step="1" />
 
                         </div>
-                              
-                      
-                        <div  id="range" class="price-input ">
+                        <div id="range" class="price-input ">
                             <span style="color: #868686;">Range : </span>
                             <span class="value">$100</span>
                             <span> - </span>
@@ -55,31 +63,50 @@
                 </div>
                 <div class="shopbrands">
                     <h3>Brands</h3>
+                    @*<div>
+                    @foreach (Brand brand in Model.Brands)
+                    {
                     <div class="item">
-                        <label class="ctgname">Rolex</label>
-                        <div class="count">(5)</div>
+                    <a asp-controller="product" asp-action="filter" asp-route-id="@brand.Id" class="ctgname"><label>@brand.Name((@brand.Products.Count()))</label></a>
+                    <div class="count">(5)</div>
+                    </div>
+                    }
+                    </div>*@
+                    <div class="item">
+                        <a class="ctgname"><label>Rolex</label></a>
+                        @*<div class="count">(5)</div>*@
                     </div>
                     <div style="margin: 10px 0 5px 0 ;" class="item">
-                        <label class="ctgname">Patek Philippe</label>
-                        <div class="count">(3)</div>
+                        <a class="ctgname"><label>Patek Philippe</label></a>
+                        @*<div class="count">(3)</div>*@
                     </div>
+
                 </div>
                 <hr>
                 <div class="shopbrands-2">
                     <h3>Color</h3>
                     <hr>
                     <div class="item">
-                        <label class="ctgname">Gold</label>
-                        <div class="count">(3)</div>
+                        <a class="ctgname"><label>Gold</label></a>
+                        @*<div class="count">(3)</div>*@
                     </div>
                     <div class="item">
-                        <label class="ctgname">Green</label>
-                        <div class="count">(2)</div>
+                        <a class="ctgname"><label>Green</label></a>
+                      @*  <div class="count">(2)</div>*@
                     </div>
                     <div class="item">
-                        <label class="ctgname">White</label>
-                        <div class="count">(1)</div>
+                        <a class="ctgname"><label>White</label></a>
+                        @*<div class="count">(1)</div>*@
                     </div>
+                    @*<div>
+                    @foreach (Color color in Model.Colors)
+                    {
+                    <div class="item">
+                    <a class="ctgname" asp-controller="product" asp-action="filter" asp-route-id="@color.Id"><label>@color.Name((color.Name.Count()))</label></a>
+                    <div class="count">(2)</div>
+                    </div>
+                    }
+                    </div>*@
                 </div>
                 <div class="feature">
                     <h3>FEATURE PRODUCT</h3>
@@ -189,3 +216,119 @@
             </div>
         </div>
 </section>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/base/jquery-ui.css" />
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        let categoryIds = [];
+        let colorsIds = [];
+        let brandsIds = [];
+        let min = -1;
+        let max = -1;
+        $(".range").slider({
+            range: true,
+            min: @Model.MinimumPrice,
+            max: @Model.MaximumPrice,
+            values: [@Model.MinimumPrice, @Model.MaximumPrice],
+            slide: function (event, ui) {
+                $("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
+                min = ui.values[0];
+                max = ui.values[1];
+
+                let path = [];
+
+                if (categoryIds.length > 0) {
+                    path.push(`categoriesText=${categoryIds.join(",")}`);
+                }
+
+                if (BrandIds.length > 0) {
+                    path.push(`brandsText=${brandIds.join(",")}`);
+                }
+
+                if (ColorIds.length > 0) {
+                    path.push(`colorsText=${colorIds.join(",")}`);
+                }
+
+                if (min > -1) {
+                    path.push(`min=${min}`)
+                }
+
+                if (max > -1) {
+                    path.push(`max=${max}`)
+                }
+
+                /*sortby = $('.nice-select.sort-select option:selected').val();*/
+
+                //if (sortby > -1) {
+                //    path.push(`sortby=${sortby}`)
+                //}
+
+                fetch(`shop/filter?${path.join('&')}`)
+                    .then(res => {
+                        return res.text()
+                    })
+                //.then(data => {
+                //    $('.shopProductList').html(data)
+                //})
+            }
+        })
+
+        $(document).on('click', '.categorybtn', function (e) {
+            e.preventDefault();
+            let path = []
+            if (categoryId > -1) {
+                $(this).css('color', '#000')
+                categoryId = -1
+            } else {
+                $(this).css('color', '#62AB00')
+                categoryId = $(this).attr('data-id')
+            }
+            path.push(`categoryId=${categoryId}`)
+            if (brandId > -1) {
+                path.push(`brandId=${brandId}`)
+            }
+            if (min > -1) {
+                path.push(`min=${min}`)
+            }
+            if (max > -1) {
+                path.push(`max=${max}`)
+            }
+            if (val > -1) {
+                path.push(`val=${val}`)
+            }
+            fetch('product/filter?' + path.join('&'))
+                .then(res => res.text())
+                .then(data => $(".products").html(data))products
+        })
+        $(document).on('click', '.ctgname', function (e) {
+            e.preventDefault();
+            let path = []
+            if (brandId > -1) {
+                $(this).css('color', '#000')
+                brandId = -1
+            } else {
+                $(this).css('color', '#62AB00')
+                brandId = $(this).attr('data-id')
+            }
+            path.push(`brandId=${brandId}`)
+            if (categoryId > -1) {
+                path.push(`categoryId=${categoryId}`)
+            }
+            if (min > -1) {
+                path.push(`min=${min}`)
+            }
+            if (max > -1) {
+                path.push(`max=${max}`)
+            }
+            if (val > -1) {
+                path.push(`val=${val}`)
+            }
+            fetch('product/filter?' + path.join('&'))
+                .then(res => res.text())
+                .then(data => $(".products").html(data))
+
+        })
+    })
+</script>

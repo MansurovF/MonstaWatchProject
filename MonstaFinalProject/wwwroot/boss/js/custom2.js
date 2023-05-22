@@ -38,7 +38,7 @@
 
     $(document).on('click', '.deleteBtn', function (e) {
         e.preventDefault();
-        let url = $('.deleteBtn').attr('href');
+        let url = $(this).attr('href');
         console.log(url)
         Swal.fire({
             title: 'Silmek istediyine eminsiniz?',
@@ -53,7 +53,7 @@
                 fetch(url)
                     .then(res => res.text())
                     .then(data => {
-                        $('.indexContainer').html(data)
+                        $('.category-index').html(data)
                     })
                 Swal.fire(
                     'Deleted!',

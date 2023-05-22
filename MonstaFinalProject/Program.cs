@@ -40,10 +40,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ILayoutService, LayoutService>();
+builder.Services.Configure<SmtpSetting>(builder.Configuration.GetSection("SmtpSetting"));
+
 var app = builder.Build();
-
-
-
 
 app.UseStaticFiles();
 app.UseAuthentication();

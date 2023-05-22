@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function (e) {
 
 
     $(document).on('click', '.rmvproduct', function (e) {
@@ -73,6 +73,25 @@
                     .then(res1 => res1.text())
                     .then(data1 => {
                         $('.basketIconIndex').html(data1)
+
+                    })
+            })
+
+
+    })
+    $(document).on("click", ' .addwish', function (e) {
+        console.log("asdasds")
+        e.preventDefault();
+
+        let url = $(this).attr('href');
+        fetch(url)
+            .then(res => res.text())
+            .then(data => {
+                $('.cart-page').html(data)
+                fetch('/Wishlist/GetWishlist')
+                    .then(res1 => res1.text())
+                    .then(data1 => {
+                        $('.wishIconIndex').html(data1)
 
                     })
             })

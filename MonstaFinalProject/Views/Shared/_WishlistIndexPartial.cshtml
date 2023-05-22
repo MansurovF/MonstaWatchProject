@@ -11,14 +11,14 @@
                                 <th class="pro-thumbnail"></th>
                                 <th class="pro-title">Product Name</th>
                                 <th class="pro-price">Unit Price</th>
-                                
+
                                 <th class="pro-subtotal">Total</th>
                                 <th class="pro-add"></th>
                                 <th class="pro-remove">Remove</th>
                             </tr>
                         </thead>
                         <tbody>
-                           @foreach (WishlistVM wishlistVM in Model)
+                            @foreach (WishlistVM wishlistVM in Model)
                             {
                                 <tr>
                                     <td class="pro-thumbnail">
@@ -28,11 +28,14 @@
                                     </td>
                                     <td class="pro-title"><a href="#">@wishlistVM.Title</a></td>
                                     <td class="pro-price"><span>@wishlistVM.Price</span></td>
-                                    
+
                                     <td class="pro-subtotal"><span>$395.00</span></td>
-                                    <td class="pro-add"><a class="addbasket" asp-controller="basket" asp-action="addbasket">Add to Cart</a></td>
+                                    <td style="visibility:hidden;" class="pro-add">
+                                        <a class="addbasket" asp-controller="basket" asp-action="addbasket" asp-route-Id="@wishlistVM.Id">Add to Cart</a>
+                                        </td>
                                     <td id="pro-remove">
-                                        <a asp-action="RemoveWishlist" asp-controller="Wishlist" asp-route-id="@wishlistVM.Id" class="removeWishlist"><i class="fa-regular fa-trash-can  "></i></a>
+                                        <a style="color: #a3a3a3;font-size: 20px;"
+                                       class="rmvproduct" asp-action="RemoveWishlist" asp-controller="wishlist" asp-route-id="@wishlistVM.Id"><i style="padding-top: 20px;" class="fa-regular fa-trash-can  "></i></a>
                                     </td>
                                 </tr>
                             }

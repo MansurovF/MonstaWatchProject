@@ -37,8 +37,17 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
             Product product = await _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .Include(p => p.Color)
+                .Include(p => p.ProductImages.Where(pi => pi.IsDeleted == false))
                 .FirstOrDefaultAsync(c => c.IsDeleted == false && c.Id == id);
-                
+
+            if (product == null) return NotFound();
+            ViewBag.Brands = await _context.Brands.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Categories = await _context.Categories.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Colors = await _context.Colors.Where(b => b.IsDeleted == false).ToListAsync();
+
+
 
             return View(product);
         }
@@ -55,7 +64,6 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //nese create elemir selectiste problem gosterir createcshtmlde
         public async Task<IActionResult> Create(Product product)
         {
             ViewBag.Brands = await _context.Brands.Where(ca => ca.IsDeleted == false).ToListAsync();
@@ -208,34 +216,60 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeleteImage(int? id, int? imageId)
+        public async Task<IActionResult> DeleteProduct(int? id)
         {
             if (id == null) return BadRequest();
 
-            if (imageId == null) return BadRequest();
-
             Product product = await _context.Products
                 .Include(p => p.ProductImages.Where(pi => pi.IsDeleted == false))
+                .Include(p => p.Color)
+              .Include(p => p.Brand)
+              .Include(p => p.Category)
                 .FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
-
             if (product == null) return NotFound();
+            ViewBag.Brands = await _context.Brands.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Categories = await _context.Categories.Where(b => b.IsDeleted == false).ToListAsync();
+            ViewBag.Colors = await _context.Colors.Where(b => b.IsDeleted == false).ToListAsync();
 
-            if (!product.ProductImages.Any(pi => pi.Id == imageId)) return BadRequest();
-
-            if (product.ProductImages.Count() <= 1)
+            if (product.MainFile != null)
             {
-                return BadRequest();
+                FileHelper.DeleteFile(product.MainImage, _env, "image");
+
             }
-
-            product.ProductImages.FirstOrDefault(p => p.Id == imageId).IsDeleted = true;
-            product.ProductImages.FirstOrDefault(p => p.Id == imageId).DeletedBy = "System";
-            product.ProductImages.FirstOrDefault(p => p.Id == imageId).DeletedAt = DateTime.UtcNow.AddHours(4);
-
+            if (product.HoverFile != null)
+            {
+                FileHelper.DeleteFile(product.HoverImage, _env, "image");
+            }
+            if (product.Files != null && product.Files.Count() > 0)
+            {
+                foreach (ProductImage productImage in product.ProductImages)
+                {
+                    FileHelper.DeleteFile(productImage.Image, _env, "image");
+                }
+            }
+            product.IsDeleted = true;
+            product.DeletedAt = DateTime.UtcNow.AddHours(4);
+            product.DeletedBy = "System";
             await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //if (product == null) return NotFound();
 
-            FileHelper.DeleteFile(product.ProductImages.FirstOrDefault(p => p.Id == imageId).Image, _env, "assets", "images");
+            //if (!product.ProductImages.Any(pi => pi.Id == imageId)) return BadRequest();
 
-            return PartialView("_ProductImagePartial", product.ProductImages.Where(pi => pi.IsDeleted == false).ToList());
+            //if (product.ProductImages.Count() <= 1)
+            //{
+            //    return BadRequest();
+            //}
+
+            //product.ProductImages.FirstOrDefault(p => p.Id == imageId).IsDeleted = true;
+            //product.ProductImages.FirstOrDefault(p => p.Id == imageId).DeletedBy = "System";
+            //product.ProductImages.FirstOrDefault(p => p.Id == imageId).DeletedAt = DateTime.UtcNow.AddHours(4);
+
+            //await _context.SaveChangesAsync();
+
+            //FileHelper.DeleteFile(product.ProductImages.FirstOrDefault(p => p.Id == imageId).Image, _env, "assets", "images");
+
+            //return PartialView("_ProductImagePartial", product.ProductImages.Where(pi => pi.IsDeleted == false).ToList());
         }
 
         [HttpPost]

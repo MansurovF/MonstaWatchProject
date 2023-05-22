@@ -244,22 +244,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         //problem with delete
 
         [HttpGet]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null) return BadRequest();
-
-            Category category = await _context.Categories
-                .Include(ca => ca.Children.Where(ch => ch.IsDeleted == false))
-                .ThenInclude(cb => cb.Products.Where(p => p.IsDeleted == false))
-                .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
-                .FirstOrDefaultAsync(ca => ca.IsDeleted == false && ca.Id == id);
-            return View(category);
-        }
-
-        [HttpGet]
-
-        public async Task<IActionResult> DeleteCategory(int? id)
+        public async Task<IActionResult> Delete(int? id,int pageIndex=1)
         {
             if (id == null) return BadRequest();
 
@@ -303,7 +288,61 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            IEnumerable<Category> categories=  await _context.Categories
+                .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
+                .Where(ca => ca.IsDeleted == false && ca.IsMain)
+                .OrderByDescending(ca => ca.Id).ToListAsync();
+
+            return PartialView("_CategoryIndexPartial",PageNatedList<Category>.Create(categories.AsQueryable(),pageIndex , 3,8));
         }
+
+        //[HttpGet]
+
+        //public async Task<IActionResult> DeleteCategory(int? id)
+        //{
+        //    if (id == null) return BadRequest();
+
+        //    Category category = await _context.Categories
+        //       .Include(ca => ca.Children.Where(ch => ch.IsDeleted == false))
+        //       .ThenInclude(ch => ch.Products.Where(p => p.IsDeleted == false))
+        //       .Include(ca => ca.Products.Where(p => p.IsDeleted == false))
+        //       .FirstOrDefaultAsync(ca => ca.IsDeleted == false && ca.Id == id);
+
+        //    if (category == null) return NotFound();
+
+        //    if (category.Children != null && category.Children.Count() > 0)
+        //    {
+        //        foreach (Category child in category.Children)
+        //        {
+        //            child.IsDeleted = true;
+        //            child.DeletedBy = "System";
+        //            child.DeletedAt = DateTime.UtcNow.AddHours(4);
+
+        //            if (child.Products != null && child.Products.Count() > 0)
+        //            {
+        //                foreach (Product product in child.Products)
+        //                {
+        //                    product.CategoryId = null;
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    if (category.Products != null && category.Products.Count() > 0)
+        //    {
+        //        foreach (Product product in category.Products)
+        //        {
+        //            product.CategoryId = null;
+        //        }
+        //    }
+
+        //    category.IsDeleted = true;
+        //    category.DeletedBy = "System";
+        //    category.DeletedAt = DateTime.UtcNow.AddHours(4);
+
+        //    await _context.SaveChangesAsync();
+
+        //    return RedirectToAction(nameof(Index));
+        //}
     }
 }

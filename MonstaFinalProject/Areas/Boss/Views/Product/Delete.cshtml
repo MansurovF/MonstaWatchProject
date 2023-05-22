@@ -1,7 +1,84 @@
-﻿
+﻿@model Product
 @{
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
+
+
+<div class="d-flex justify-content-between align-items-center my-2">
+    <h1>Delete Product</h1>
+    <a asp-area="manage" asp-action="DeleteProduct" asp-controller="Product" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Title</th>
+            <td>@Model.Title</td>
+        </tr>
+        <tr>
+            <th scope="row">Type</th>
+            <td>@(Model.IsFeatured ? "Featured" : Model.IsBestSelling ? "Best Selling" : Model.IsOnsale ? "Onsale" : "")</td>
+        </tr>
+        <tr>
+            <th scope="row">Color</th>
+            <td>@Model.Color?.Name</td>
+        </tr>
+        <tr>
+            <th scope="row">Category</th>
+            <td>@Model.Category?.Name</td>
+        </tr>
+        <tr>
+            <th scope="row">Brand</th>
+            <td>@Model.Brand?.Name</td>
+        </tr>
+        <tr>
+            <th scope="row">Main Image</th>
+            <td><img style="width:100px" src="~/image/products/@Model.MainImage" alt="mainimg" /></td>
+        </tr>
+        <tr>
+            <th scope="row">Hover Image</th>
+            <td><img style="width:100px" src="~/image/products/@Model.HoverImage" alt="hoverimg" /></td>
+        </tr>
+        <tr>
+            <th scope="row">All Images</th>
+            <td>
+                @if (Model.ProductImages != null && Model.ProductImages.Count() > 0)
+                {
+
+                    @foreach (ProductImage productImage in Model.ProductImages)
+                    {
+                        <img style="width:100px" src="~/image/products/@productImage.Image" alt="primg" />
+
+                    }
+
+                }
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Description</th>
+            <td>@Model.Description</td>
+        </tr>
+        <tr>
+            <th scope="row">Count</th>
+            <td>@Model.Count</td>
+        </tr>
+        <tr>
+            <th scope="row">Price</th>
+            <td>€@Model.Price</td>
+        </tr>
+        <tr>
+            <th scope="row">Shipping</th>
+            <td>€@Model.Shipping</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
 
