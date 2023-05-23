@@ -1,0 +1,8 @@
+﻿@model List<BasketVM>
+
+    <a asp-controller="basket">
+        <div class="bag">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">@Model.Count()</span>
+        </div>
+    </a>

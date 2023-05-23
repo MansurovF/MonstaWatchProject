@@ -1,29 +1,45 @@
-﻿<div class="headofregister">
-        <div class="container">
-            <h1>Register</h1>
-            <div class="contentabout">
+﻿@model ProfileVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="headofregister">
+    <div class="container">
+        <h1>Register</h1>
+        <div class="contentabout">
             <a asp-controller="home">Home</a>
-                <span style="color: white; margin: 0 10px;">></span>
+            <span style="color: white; margin: 0 10px;">></span>
             <a asp-controller="register"><span>Register</span></a>
-            </div>
-            <hr style="margin: 20px 47px 0; color: #a3a3a3;">
-        </div> 
-    </div>
-    <section id="Registersys">
-        <div class="container">
-            <h3>
-                New Customer
-            </h3>
-            <div class="alllogin">
-                <form class="login-form">     
-                  <p>Fullname & Username<input type="username" required></p>
-                  <p>Email address  <br><input type="email" id="email"  minlength="5" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/></p>
-                  <p>Password <br><input type="password"  minlength="4" required/></p>
-                  <p>Repeat Password <br><input type="password"  minlength="4" required/></p>
-                  <p><button type="submit">Register</button>
-                 </p>
-                </form>
-            </div>
-            <hr style="margin: 80px 47px 0 ; color: #a3a3a3;">
         </div>
-    </section>
+        <hr style="margin: 20px 47px 0; color: #a3a3a3;">
+    </div>
+</div>
+<section id="Registersys">
+    <div class="container">
+        <h3>
+            New Customer
+        </h3>
+        <div class="alllogin">
+            <form class="login-form" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div><p >Fullname & Username<input asp-for="UserName" required></p>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <p>Email address  <br><input asp-for="Email" id="email" minlength="5" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required /></p>
+                <p>Password <br><input asp-for="Password" minlength="4" required /></p>
+                <p>Repeat Password <br><input asp-for="RepeatPassword" minlength="4" required /></p>
+                <p>
+                    <button type="submit">Register</button>
+                </p>
+            </form>
+        </div>
+        <hr style="margin: 80px 47px 0 ; color: #a3a3a3;">
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+
+@*@section Scripts{
+    @await Html.PartialAsync("_ValidationPartial")
+}*@

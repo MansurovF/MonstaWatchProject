@@ -1,6 +1,4 @@
-﻿using MonstaFinalProject.Models;
-
-namespace MonstaFinalProject.ViewModels.BasketViewModels
+﻿namespace MonstaFinalProject.ViewModels.BasketViewModels
 {
     public class BasketVM
     {
@@ -9,5 +7,6 @@ namespace MonstaFinalProject.ViewModels.BasketViewModels
         public string Title { get; set; }
         public string Image { get; set; }
         public double Price { get; set; }
+        public double Shipping { get; set; }
     }
 }

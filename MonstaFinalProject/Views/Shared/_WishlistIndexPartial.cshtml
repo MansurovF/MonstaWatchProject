@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WishlistVM>
+<section id="Wishlist">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cart-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr style="    background: #383838;;
+                                ">
+                                <th class="pro-thumbnail"></th>
+                                <th class="pro-title">Product Name</th>
+                                <th class="pro-price">Unit Price</th>
+                                
+                                <th class="pro-subtotal">Total</th>
+                                <th class="pro-add"></th>
+                                <th class="pro-remove">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach (WishlistVM wishlistVM in Model)
+                            {
+                                <tr>
+                                    <td class="pro-thumbnail">
+                                        <a href="#">
+                                            <img src="~/assets/images/@wishlistVM.Image" alt="Product">
+                                        </a>
+                                    </td>
+                                    <td class="pro-title"><a href="#">@wishlistVM.Title</a></td>
+                                    <td class="pro-price"><span>@wishlistVM.Price</span></td>
+                                    
+                                    <td class="pro-subtotal"><span>$395.00</span></td>
+                                    <td class="pro-add"><a class="addbasket" asp-controller="basket" asp-action="addbasket">Add to Cart</a></td>
+                                    <td class="pro-remove"><a asp-action="removewishlist" asp-controller="wishlist" asp-route-id="@wishlistVM.Id"><i class="fa-regular fa-trash-can"></i></a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

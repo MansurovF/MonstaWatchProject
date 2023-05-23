@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Models;
@@ -14,12 +15,15 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         {
             _context = context;
         }
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             IEnumerable<Brand> brands = await _context.Brands.Include(b=>b.Products).Where(b => b.IsDeleted == false).ToListAsync();
             return View(brands);
         }
 
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Detail(int? Id)
         {
             if (Id == null) return BadRequest();
@@ -31,6 +35,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -38,6 +43,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create(Brand brand)
         {
             if (!ModelState.IsValid)
@@ -63,6 +69,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null) return BadRequest();
@@ -74,6 +81,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Update(int? Id,Brand brand)
         {
             if (!ModelState.IsValid) return View(brand);
@@ -99,6 +107,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return BadRequest();

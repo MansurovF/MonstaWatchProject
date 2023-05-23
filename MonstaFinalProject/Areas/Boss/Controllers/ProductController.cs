@@ -111,7 +111,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
                     return View(product);
                 }
 
-                product.MainImage = await product.MainFile.CreateFileAsync(_env, "assets", "image", "products");
+                product.MainImage = await product.MainFile.CreateFileAsync(_env, "assets", "images");
             }
             else
             {
@@ -132,7 +132,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
                     return View(product);
                 }
 
-                product.HoverImage = await product.HoverFile.CreateFileAsync(_env, "assets", "image", "products");
+                product.HoverImage = await product.HoverFile.CreateFileAsync(_env, "assets", "images");
             }
             else
             {
@@ -140,7 +140,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
                 return View(product);
             }
 
-            if (product.Files != null & product.Files.Count() > 6)
+            if (product.Files != null && product.Files.Count() > 6)
             {
                 ModelState.AddModelError("Files", "File sayi coxdur! 6 dan cox fayl gondermek olmaz!");
                 return View(product);
@@ -163,7 +163,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
                     ProductImage productImage = new ProductImage
                     {
-                        Image = await file.CreateFileAsync(_env, "assets", "image", "products"),
+                        Image = await file.CreateFileAsync(_env, "assets", "images"),
                         CreatedAt = DateTime.UtcNow.AddHours(4),
                         CreatedBy = "System"
                     };
@@ -233,7 +233,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
             await _context.SaveChangesAsync();
 
-            FileHelper.DeleteFile(product.ProductImages.FirstOrDefault(p => p.Id == imageId).Image, _env, "assets", "image", "products");
+            FileHelper.DeleteFile(product.ProductImages.FirstOrDefault(p => p.Id == imageId).Image, _env, "assets", "images");
 
             return PartialView("_ProductImagePartial", product.ProductImages.Where(pi => pi.IsDeleted == false).ToList());
         }
@@ -358,7 +358,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
                     ProductImage productImage = new ProductImage
                     {
-                        Image = await file.CreateFileAsync(_env, "assets", "images", "products"),
+                        Image = await file.CreateFileAsync(_env, "assets", "images"),
                         CreatedAt = DateTime.UtcNow.AddHours(4),
                         CreatedBy = "System"
                     };

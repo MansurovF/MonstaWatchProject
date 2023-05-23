@@ -25,7 +25,7 @@ namespace MonstaFinalProject.Models
         public bool IsOnsale { get; set; }
         
         public int Count { get; set; }
-
+        public double Shipping { get; set; }
 
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
@@ -33,7 +33,6 @@ namespace MonstaFinalProject.Models
         public Brand? Brand { get; set; }
         public int? ColorId { get; set; }
         public Color? Color { get; set; }
-        //public IEnumerable<Basket>? Baskets { get; set; }
 
         public List<ProductImage>? ProductImages { get; set; }
 
@@ -43,5 +42,7 @@ namespace MonstaFinalProject.Models
         public IFormFile? HoverFile { get; set; }
         [NotMapped]
         public IEnumerable<IFormFile>? Files { get; set; }
+        public IEnumerable<Basket>? Baskets { get; set; }
+        public IEnumerable<Wishlist>? Wishlists { get; set; }
     }
 }

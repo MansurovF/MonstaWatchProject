@@ -1,4 +1,9 @@
-﻿<div class="headoflogin">
+﻿@model LoginVM
+@{
+    ViewData["Title"]="Index";
+}
+
+<div class="headoflogin">
         <div class="container">
             <h1>My Account</h1>
             <div class="contentabout">
@@ -15,9 +20,10 @@
                 Login
             </h3>
             <div class="alllogin">
-                <form class="login-form">     
-                  <p>Email address <i class="fa-solid fa-star-of-life"></i> <br><input type="email" id="email"  minlength="5" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/></p>
-                  <p>Password <i class="fa-solid fa-star-of-life"></i><br><input type="password"  minlength="4" required/></p>
+                <form class="login-form" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                  <p>Email address <i class="fa-solid fa-star-of-life"></i> <br><input asp-for=Email id="email"  minlength="5" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/></p>
+                  <p>Password <i class="fa-solid fa-star-of-life"></i><br><input asp-for="Password"  minlength="4" required/></p>
                   <p><button type="submit">Login</button>
                     <input class="remembermeee" type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
                  </p>

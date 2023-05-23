@@ -1,4 +1,10 @@
-﻿<div class="headofcart">
+﻿@model List<BasketVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="headofcart">
         <div class="container">
             <h1>Cart</h1>
             <div class="contentabout">
@@ -9,119 +15,6 @@
             <hr style="margin: 20px 47px 0; color: #a3a3a3;">
         </div> 
     </div>
-    <section id="Cart">
-        <div class="container">
-            <div id="mainforcart">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="cart-table table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr style="    background: #383838;;
-                                    ">
-                                        <th class="pro-thumbnail"></th>
-                                        <th class="pro-title">Product Name</th>
-                                        <th class="pro-price">Unit Price</th>
-                                        <th class="pro-quantity">Quantity</th>
-                                        <th class="pro-subtotal">Total</th>
-                                        <th class="pro-remove">Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img
-                                          src="~/assets/images/saat3.jpg" alt="Product"></a></td>
-                                        <td class="pro-title"><a href="#">Rinosin Glasses</a></td>
-                                        <td class="pro-price"><span>$395.00</span></td>
-                                        <td class="pro-quantity">
-                                            <div class="pro-qty">
-                                                <div class=" inputer count-input-block">
-                                                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                                                    <input style="width: 50px; height: 37px; padding-left: 18px;" type="text" value="1" />
-                                                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="pro-subtotal"><span>$395.00</span></td>
-                                        <td id="pro-remove"><i class="fa-regular fa-trash-can"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    <section id="Aftercart">
-        <div class="container">
-            <div class="aftercartal">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-9">
-                    <div>
-                           <h3>Cart Totals</h3>
-                    </div>
-                    <hr style="color: #a3a3a3; width: 55%; padding-bottom: 20px;">
-                    <table class="table">
-                        <tbody >
-                          <tr class="specialtr" style="border-style: none; " >
-                            <th style="border-style: none; " class="subtotals" scope="row">Subtotals</th>
-                            <td style="border-style: none; " class="priceaftercart">$395.00</td>
-                          </tr>
-                          <tr style="border-style: none;">
-                            <th style="border-style: none;" class="shippings" scope="row">Shipping</th>
-                            <td style="border-style: none;" class="priceaftercart">$3.00</td>
-                          </tr>
-                          <tr style="visibility: hidden;">
-                            <th style="border-style: none;" scope="row">
-                                <td style="border-style: none;" class="adreschange">Change Address</td>
-                            </th>
-                          </tr >
-                          <tr style="border-style: none;">
-                            <th style="border-style: none;color: white;" scope="row">Total</th>
-                            <td style="border-style: none; color: rgb(160, 111, 20);" id="shippings"  class="priceaftercart">$398.00</td>
-                          </tr>
-                        </tbody style="border-style: none;">
-                      </table>
-                      <hr style="color: #a3a3a3; width: 55%; padding-bottom: 20px;">
-                      <div id="Countryadres">
-                        <a href="">Change Address</a>
-                        <div class="countryclick">
-                            <div class="container demo">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="form-label col-sm-3">Country</label>
-                                        <div class="col-sm-5">
-                                            <select id="country" name="country" class="form-control"></select>
-                                        </div>
-                                    </div><!--/.form-group-->
-                                    <div class="form-group">
-                                        <label class="form-label col-sm-3">State</label>
-                                        <div class="col-sm-4">
-                                            <select name="state" id="state" class="form-control"></select>
-                                        </div>
-                                    </div><!--/.form-group-->
-                                </form>
-                                
-                            </div>
-                        </div>
-                        <div class="checkoutfor">
-                            <button><a href="">Proceed to Checkout</a></button>
-                        </div>
-                      </div>
-                      <hr style="color: #a3a3a3; width: 55%; margin-top: 2rem;">
-
-                      <div id="show" class="text-center d-none">
-                        <div class="s-img">
-                            <!-- <img class="img-fluid" src="assets/images/undefined.png" alt="">    -->
-                        </div>
-                        <div class="s-text">
-                           <h2>Your Cart Is Empty</h2>
-                           <a class="btn" href="index.html">Go To Shopping</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main class="cart-page cart-page-main-block inner-page-sec-padding-bottom cart-main-checkoutpage">
+    @await Html.PartialAsync("_BasketIndexPartial", Model)
+</main>

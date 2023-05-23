@@ -113,10 +113,10 @@ $(document).ready(function(){
     let closeproductsidebar = document.querySelector('#closeproductsidebar');
     let openproductsidebar = document.querySelector('#openproductsidebar');
 
-    closeproductsidebar.addEventListener('click', function() {
+    closeproductsidebar?.addEventListener('click', function() {
         productsidebar.style.left = '-400px';
     })
-    openproductsidebar.addEventListener('click', function() {
+    openproductsidebar?.addEventListener('click', function() {
         productsidebar.style.left = '0';
     })
 

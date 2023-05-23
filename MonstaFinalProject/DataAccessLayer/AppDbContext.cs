@@ -1,11 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.Models;
 
 namespace MonstaFinalProject.DataAccessLayer
 {
-    public class AppDbContext :DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Slider>Sliders { get; set; }
         public DbSet<Category>Categories { get; set; }
@@ -14,5 +17,6 @@ namespace MonstaFinalProject.DataAccessLayer
         public DbSet<Color>Colors{ get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Basket> Baskets { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
     }
 }
