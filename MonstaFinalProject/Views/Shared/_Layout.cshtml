@@ -87,7 +87,7 @@
             </div>
             <div class="right">
                 <div class="icon-div">
-                    <i id="SearchIcon" class="fa-solid fa-magnifying-glass"></i>
+                   @* <i id="SearchIcon" class="fa-solid fa-magnifying-glass"></i>*@
                     <a asp-controller="wishlist"><i class="fa-solid fa-heart"></i></a>
                     <div id="Page">
                         <a class="specialgear" href="">
@@ -166,14 +166,24 @@
                     <span>BLOG</span>
                 </a>
             </div>
+            <div id="Blog">
+                <a asp-controller="contact">
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div id="Blog">
+                <a asp-controller="about">
+                    <span>About Us</span>
+                </a>
+            </div>
             <div id="Page">
                 <a href="">
                     <span>PAGE</span>
                     <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="home-sub-menu">
-                    <a asp-controller="about">About Us</a>
-                    <a asp-controller="contact">Contact</a>
+                   @* <a asp-controller="about">About Us</a>
+                    <a asp-controller="contact">Contact</a>*@
                     <a asp-controller="error">Page 404</a>
                 </div>
             </div>
@@ -203,8 +213,6 @@
             </ul>
         </div>
     </div>
-    
-   
     <section id="Sidebar">
     <div class="sidebar-div">
         <div class="close-div">
