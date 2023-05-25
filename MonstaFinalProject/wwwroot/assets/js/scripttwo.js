@@ -22,9 +22,9 @@ let sidebar = document.querySelector('#Sidebar');
 let sidebar_open = document.querySelector('#Sidebar-open');
 let sidebar_close = document.querySelector('#Sidebar-close');
 
-search.addEventListener('click', function() {
-    srcdiv.classList.toggle('active');
-})
+//search.addEventListener('click', function() {
+//    srcdiv.classList.toggle('active');
+//})
 
 sidebar_open.addEventListener('click', function() {
     sidebar.classList.add('active-sidebar');

@@ -21,14 +21,14 @@ namespace MonstaFinalProject.Controllers
         public async Task<IActionResult> Index()
         {
             List<Product> products = await _context.Products.Where(s => s.IsDeleted == false).Take(3).ToListAsync();
-            ShopVM shopVM = new ShopVM
-            {
-                Products = products
-            };
+           
 
             IEnumerable<Category> categories = await _context.Categories.Where(ca => ca.IsDeleted == false && ca.IsMain)
                .Include(ca => ca.Children.Where(ct => ct.IsDeleted == false && ct.IsMain == false))
                .Include(ca => ca.Products).ToListAsync();
+
+            IEnumerable<Brand> brands = await _context.Brands.Where(b => b.IsDeleted == false )
+               .Include(b => b.Products).ToListAsync();
 
             IEnumerable<Color> authors = await _context.Colors.Where(c => c.IsDeleted == false).ToListAsync();
 
@@ -37,6 +37,15 @@ namespace MonstaFinalProject.Controllers
 
             product = _context.Products.OrderByDescending(p => p.Price).First();
             double maxValue = ( product.Price);
+
+            ShopVM shopVM = new ShopVM
+            {
+                Products = products,
+                MinimumPrice = minValue,
+                MaximumPrice = maxValue,
+                Categories = categories,
+                Brands = brands,
+            };
 
             return View(shopVM);
 
@@ -87,7 +96,7 @@ namespace MonstaFinalProject.Controllers
                 }
             }
 
-            return PartialView("_ShopViewPartial", products);
+            return PartialView("_ShopViewPartial", products.Take(3));
         }
 
     }

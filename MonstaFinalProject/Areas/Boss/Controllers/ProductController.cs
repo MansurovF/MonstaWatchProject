@@ -404,15 +404,15 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
                 dbproduct.ProductImages.AddRange(productImages);
             }
 
-            dbproduct.Title= product.Title;
-            dbproduct.Description= product.Description;
-            dbproduct.Price= product.Price;
+            dbproduct.Title = product.Title;
+            dbproduct.Description = product.Description;
+            dbproduct.Price = product.Price;
             dbproduct.Count = product.Count;
-            dbproduct.IsBestSelling= product.IsBestSelling;
-            dbproduct.IsFeatured= product.IsFeatured;
-            dbproduct.IsOnsale= product.IsOnsale;
+            dbproduct.IsBestSelling = product.IsBestSelling;
+            dbproduct.IsFeatured = product.IsFeatured;
+            dbproduct.IsOnsale = product.IsOnsale;
             dbproduct.UpdatedBy = "System";
-            dbproduct.UpdatedAt= DateTime.UtcNow.AddHours(4);
+            dbproduct.UpdatedAt = DateTime.UtcNow.AddHours(4);
 
             await _context.SaveChangesAsync();
 
@@ -423,17 +423,28 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return BadRequest();
+
             Product product = await _context.Products
+                .FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
+
+            if (product == null) return NotFound();
+
+            product.IsDeleted = true;
+            product.DeletedAt = DateTime.UtcNow.AddHours(4);
+            product.DeletedBy = "System";
+            await _context.SaveChangesAsync();
+
+            IEnumerable<Product> products = await _context.Products
              .Include(p => p.ProductImages.Where(pi => pi.IsDeleted == false))
              .Include(p => p.Color)
              .Include(p => p.Brand)
              .Include(p => p.Category)
-             .FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
-            if (product == null) return NotFound();
+             .Where(p => p.IsDeleted == false).ToListAsync();
+            
             ViewBag.Brands = await _context.Brands.Where(b => b.IsDeleted == false).ToListAsync();
             ViewBag.Categories = await _context.Categories.Where(b => b.IsDeleted == false).ToListAsync();
             ViewBag.Colors = await _context.Colors.Where(b => b.IsDeleted == false).ToListAsync();
-            return View(product);
+            return PartialView("_ProductIndexPartial", PageNatedList<Product>.Create(products.AsQueryable(), 1, 3, 8));
         }
 
     }

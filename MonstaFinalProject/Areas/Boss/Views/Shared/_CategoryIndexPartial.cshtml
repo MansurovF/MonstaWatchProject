@@ -1,6 +1,6 @@
 ﻿@model PageNatedList<Category>
 @{
-    int count = 0;
+    int count = (Model.PageIndex - 1) * 3;
 }
 
 

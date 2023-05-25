@@ -62,15 +62,18 @@ namespace MonstaFinalProject.Controllers
                 }
             }
             ViewBag.Wishlist = cookie;
-            return PartialView("_WishlistIndexPartial", wishlistVMs);
+            return PartialView("_WishlistCartPartial", wishlistVMs);
         }
 
         public async Task<IActionResult> AddWishlist(int? id)
         {
             if (id == null) return BadRequest();
             if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
-            List<WishlistVM> wishlistVMs = new List<WishlistVM>();
+            
             string cookie = HttpContext.Request.Cookies["wishlist"];
+
+            List<WishlistVM> wishlistVMs = new List<WishlistVM>();
+
             if (string.IsNullOrWhiteSpace(cookie))
             {
                 wishlistVMs = new List<WishlistVM>
@@ -102,42 +105,7 @@ namespace MonstaFinalProject.Controllers
             ViewBag.Wishlist = cookie;
             return PartialView("_WishlistIndexPartial", wishlistVMs);
         }
-        //public async Task<IActionResult> DeleteWishlist(int? id)
-        //{
-        //    if (id == null) return BadRequest();
-        //    if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id)) return NotFound();
-        //    string cookie = HttpContext.Request.Cookies["wishlist"];
-        //    List<WishlistVM> wishlistVMs = new List<WishlistVM>();
-        //    if (!string.IsNullOrWhiteSpace(cookie))
-        //    {
-        //        wishlistVMs = JsonConvert.DeserializeObject<List<BasketVM>>(cookie);
-        //        if (wishlistVMs.Exists(p => p.Id == id))
-        //        {
-        //            WishlistVM wishlistVM = wishlistVMs.Find(p => p.Id == id);
-        //            if (wishlistVM.Count >= 1)
-        //            {
-        //                wishlistVMs.Remove(dbBasket);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            return BadRequest();
-        //        }
-        //    }
-        //    cookie = JsonConvert.SerializeObject(wishlistVMs);
-        //    HttpContext.Response.Cookies.Append("wishlist", cookie);
-        //    foreach (WishlistVM wishlistVM in wishlistVMs)
-        //    {
-        //        Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == wishlistVM.Id);
-        //        if (product != null)
-        //        {
-        //            wishlistVM.Title = product.Title;
-        //            wishlistVM.Price = product.Price;
-        //            wishlistVM.Image = product.MainImage;
-        //        }
-        //    }
-        //    return PartialView("_BasketIndexPartial", wishlistVMs);
-        //}
+        
 
         public async Task<IActionResult> RemoveWishlist(int? id)
         {

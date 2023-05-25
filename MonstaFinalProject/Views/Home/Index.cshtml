@@ -26,7 +26,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12 col-6">
                 <div class="card item1 border-0">
                     <div class="ca-img">
-                        <a href="">
+                        <a asp-controller="shop">
                             <img src="~/assets/images/banner-home2.1.jpg" alt="">
                         </a>
                     </div>
@@ -42,7 +42,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12 col-6">
                 <div class="card item1 border-0">
                     <div class="ca-img">
-                        <a href="">
+                        <a asp-controller="shop">
                             <img src="~/assets/images/banner-home2.2.jpg" alt="">
                         </a>
                     </div>
@@ -73,14 +73,14 @@
                         <div class="bag ">
                             <div class="cart-ico">
                                 <div class="heaart">
-                                    <a style="color:orange !important;" class="addwish" asp-controller="wishlist" asp-action="addwish" asp-route-Id="@item.Id"><i class="fa-solid fa-heart"></i></a>
+                                    <a style="color:#a3a3a3 !important;" class="addwish" asp-controller="wishlist" asp-action="addwish" asp-route-Id="@item.Id"><i class="fa-solid fa-heart"></i></a>
                                 </div>
                                 <div class="cart">
                                     <a style="color:white;" class="addbasket" asp-controller="basket" asp-action="addbasket" asp-route-Id="@item.Id"><span>Add to Cart</span></a>
                                 </div>
 
                                 <div class="compare">
-                                    <a href=""><i class="fa-solid fa-sliders"></i></a>
+                                    <a asp-controller="blog"><i class="fa-solid fa-sliders"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
         <div class="allrightmirror">
             <div class="row slider3-item">
                 <div class="mirroraslide col-lg-4 col-sm-6 col-6">
-                    <a href="blog.html">
+                    <a asp-controller="blog">
                         <div class="slideofmirror">
                             <div class="cardD">
                                 <img src="~/assets/images/10blog.jpg" class="card-img-top" alt="...">
@@ -185,7 +185,7 @@
 
                 </div>
                 <div class="mirroraslide col-lg-4 col-sm-6 col-6">
-                    <a href="blog.html">
+                    <a asp-controller="blog">
                         <div class="slideofmirror">
                             <div class="cardD">
                                 <img src="~/assets/images/14blog.jpg" class="card-img-top" alt="...">
@@ -201,7 +201,7 @@
 
                 </div>
                 <div class="mirroraslide col-lg-4 col-sm-6 col-6">
-                    <a href="blog.html">
+                    <a asp-controller="blog">
                         <div class="slideofmirror">
                             <div class="cardD">
                                 <img src="~/assets/images/5blog.jpg" class="card-img-top" alt="...">
@@ -217,7 +217,7 @@
 
                 </div>
                 <div class="mirroraslide col-lg-4 col-sm-6 col-6">
-                    <a href="blog.html">
+                    <a asp-controller="blog">
                         <div class="slideofmirror">
                             <div class="cardD">
                                 <img src="~/assets/images/9blog.jpg" class="card-img-top" alt="...">
@@ -233,7 +233,7 @@
 
                 </div>
                 <div class="mirroraslide col-lg-4 col-sm-6 col-6">
-                    <a href="blog.html">
+                    <a asp-controller="blog">
                         <div class="slideofmirror">
                             <div class="cardD">
                                 <img src="~/assets/images/6blog.jpg" class="card-img-top" alt="...">

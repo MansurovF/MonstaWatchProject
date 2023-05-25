@@ -18,27 +18,15 @@
                 <div class="categories">
                     <h3>CATEGORIES</h3>
                     <div class="list">
-                        @*@if (Model.Categories != null && Model.Categories.Count() > 0)
+                        @if (Model.Categories != null && Model.Categories.Count() > 0)
                         {
                             @foreach (Category parent in Model.Categories)
                             {
                                 <div class="item">
-                                    <button type="button"> <a class="categorybtn" asp-action="filter" asp-controller="product" asp-route-categoryId="@cateogry.Id">@parent.Name</a></button>
+                                    <button type="button"> <a data-id="@parent.Id" class="categorybtn" asp-action="filter" asp-controller="product" asp-route-categoryId="@parent.Id">@parent.Name</a></button>
                                 </div>
                             }
-                        }*@
-                        <div class="item">
-                            <button type="button"> <a href="/product.html">Classic</a></button>
-                        </div>
-                        <div class="item">
-                            <button type="button"> <a href="/product.html">Fashion</a></button>
-                        </div>
-                        <div class="item">
-                            <button type="button"> <a href="/product.html">Digital Watches</a></button>
-                        </div>
-                        <div class="item">
-                            <button type="button"> <a href="/product.html">Quartz Watches</a></button>
-                        </div>
+                        }
                     </div>
 
                 </div>
@@ -63,23 +51,23 @@
                 </div>
                 <div class="shopbrands">
                     <h3>Brands</h3>
-                    @*<div>
+                    <div>
                     @foreach (Brand brand in Model.Brands)
                     {
                     <div class="item">
-                    <a asp-controller="product" asp-action="filter" asp-route-id="@brand.Id" class="ctgname"><label>@brand.Name((@brand.Products.Count()))</label></a>
-                    <div class="count">(5)</div>
+                    <a asp-controller="product" asp-action="filter" asp-route-brandId="@brand.Id" class="ctgname"><label>@brand.Name</label></a>
+                    
                     </div>
                     }
-                    </div>*@
-                    <div class="item">
+                    </div>
+                    @*<div class="item">
                         <a class="ctgname"><label>Rolex</label></a>
-                        @*<div class="count">(5)</div>*@
+                        <div class="count">(5)</div>
                     </div>
                     <div style="margin: 10px 0 5px 0 ;" class="item">
                         <a class="ctgname"><label>Patek Philippe</label></a>
-                        @*<div class="count">(3)</div>*@
-                    </div>
+                        <div class="count">(3)</div>
+                    </div>*@
 
                 </div>
                 <hr>
@@ -222,112 +210,113 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type='text/javascript'>
     $(document).ready(function () {
-        let categoryIds = [];
-        let colorsIds = [];
-        let brandsIds = [];
+        let categoryId = -1;
+        let colorId = -1;
+        let brandId = -1;
         let min = -1;
         let max = -1;
-        $(".range").slider({
-            range: true,
-            min: @Model.MinimumPrice,
-            max: @Model.MaximumPrice,
-            values: [@Model.MinimumPrice, @Model.MaximumPrice],
-            slide: function (event, ui) {
-                $("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
-                min = ui.values[0];
-                max = ui.values[1];
+        //$(".sb-range-slider").slider({
+        //    range: true,
+        //    min: @Model.MinimumPrice,
+        //    max: @Model.MaximumPrice,
+        //    values: [@Model.MinimumPrice, @Model.MaximumPrice],
+        //    slide: function (event, ui) {
+        //        $("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
+        //        min = ui.values[0];
+        //        max = ui.values[1];
 
-                let path = [];
+        //        let path = [];
 
-                if (categoryIds.length > 0) {
-                    path.push(`categoriesText=${categoryIds.join(",")}`);
-                }
+        //        if (categoryIds.length > 0) {
+        //            path.push(`categoriesText=${categoryIds.join(",")}`);
+        //        }
 
-                if (BrandIds.length > 0) {
-                    path.push(`brandsText=${brandIds.join(",")}`);
-                }
+        //        if (BrandIds.length > 0) {
+        //            path.push(`brandsText=${brandIds.join(",")}`);
+        //        }
 
-                if (ColorIds.length > 0) {
-                    path.push(`colorsText=${colorIds.join(",")}`);
-                }
+        //        if (ColorIds.length > 0) {
+        //            path.push(`colorsText=${colorIds.join(",")}`);
+        //        }
 
-                if (min > -1) {
-                    path.push(`min=${min}`)
-                }
+        //        if (min > -1) {
+        //            path.push(`min=${min}`)
+        //        }
 
-                if (max > -1) {
-                    path.push(`max=${max}`)
-                }
+        //        if (max > -1) {
+        //            path.push(`max=${max}`)
+        //        }
+        //        console.log('test');
+        //        /*sortby = $('.nice-select.sort-select option:selected').val();*/
 
-                /*sortby = $('.nice-select.sort-select option:selected').val();*/
+        //        //if (sortby > -1) {
+        //        //    path.push(`sortby=${sortby}`)
+        //        //}
 
-                //if (sortby > -1) {
-                //    path.push(`sortby=${sortby}`)
-                //}
-
-                fetch(`shop/filter?${path.join('&')}`)
-                    .then(res => {
-                        return res.text()
-                    })
-                //.then(data => {
-                //    $('.shopProductList').html(data)
-                //})
-            }
-        })
+        //        fetch(`shop/filter?${path.join('&')}`)
+        //            .then(res => {
+        //                return res.text()
+        //            })
+        //        .then(data => {
+        //            $('.shopProductList').html(data)
+        //        })
+        //    }
+        //})
 
         $(document).on('click', '.categorybtn', function (e) {
             e.preventDefault();
             let path = []
             if (categoryId > -1) {
-                $(this).css('color', '#000')
+                $(this).css('color', '#EC9705')
                 categoryId = -1
             } else {
-                $(this).css('color', '#62AB00')
+                $(this).css('color', '#EC9705')
                 categoryId = $(this).attr('data-id')
             }
             path.push(`categoryId=${categoryId}`)
+
             if (brandId > -1) {
                 path.push(`brandId=${brandId}`)
             }
-            if (min > -1) {
-                path.push(`min=${min}`)
-            }
-            if (max > -1) {
-                path.push(`max=${max}`)
-            }
-            if (val > -1) {
-                path.push(`val=${val}`)
-            }
-            fetch('product/filter?' + path.join('&'))
+            //if (min > -1) {
+            //    path.push(`min=${min}`)
+            //}
+            //if (max > -1) {
+            //    path.push(`max=${max}`)
+            //}
+            //if (val > -1) {
+            //    path.push(`val=${val}`)
+            //}
+            fetch('shop/filter?' + path.join('&'))
                 .then(res => res.text())
-                .then(data => $(".products").html(data))products
+                .then(data => $("#products").html(data))
         })
         $(document).on('click', '.ctgname', function (e) {
             e.preventDefault();
             let path = []
             if (brandId > -1) {
-                $(this).css('color', '#000')
+                $(this).css('color', '#EC9705')
                 brandId = -1
             } else {
-                $(this).css('color', '#62AB00')
+                $(this).css('color', '#FFF')
                 brandId = $(this).attr('data-id')
             }
             path.push(`brandId=${brandId}`)
             if (categoryId > -1) {
                 path.push(`categoryId=${categoryId}`)
             }
-            if (min > -1) {
-                path.push(`min=${min}`)
-            }
-            if (max > -1) {
-                path.push(`max=${max}`)
-            }
-            if (val > -1) {
-                path.push(`val=${val}`)
-            }
-            fetch('product/filter?' + path.join('&'))
+            //if (min > -1) {
+            //    path.push(`min=${min}`)
+            //}
+            //if (max > -1) {
+            //    path.push(`max=${max}`)
+            //}
+            //if (val > -1) {
+            //    path.push(`val=${val}`)
+            //}
+            fetch('shop/filter?' + path.join('&'))
                 .then(res => res.text())
-                .then(data => $(".products").html(data))
+                .then(data => $("#products").html(data))
 
         })
     })

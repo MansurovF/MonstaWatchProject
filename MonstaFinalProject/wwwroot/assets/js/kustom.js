@@ -87,8 +87,8 @@
         fetch(url)
             .then(res => res.text())
             .then(data => {
-                $('.cart-page').html(data)
-                fetch('/Wishlist/GetWishlist')
+                $('.wishlistDetails').html(data)
+                fetch('/Wishlist/WishlistDetails')
                     .then(res1 => res1.text())
                     .then(data1 => {
                         $('.wishIconIndex').html(data1)

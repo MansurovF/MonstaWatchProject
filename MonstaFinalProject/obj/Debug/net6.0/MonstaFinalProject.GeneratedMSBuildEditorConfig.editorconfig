@@ -116,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX1Byb2R1Y3RJbWFnZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_ProductIndexPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX1Byb2R1Y3RJbmRleFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/MonstaFinalProject/MonstaFinalProject/Areas/Boss/Views/Shared/_ValidationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm9zc1xWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
