@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Models;
 using MonstaFinalProject.ViewModels;
+using System.Data;
 using System.Drawing.Drawing2D;
 
 namespace MonstaFinalProject.Areas.Boss.Controllers
@@ -15,6 +17,8 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         {
             _context = context;
         }
+
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index()
         {
             IEnumerable<Color>colors = await _context.Colors.Include(c =>c.Products).Where(c=>c.IsDeleted == false).ToListAsync();
@@ -32,6 +36,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             return View(color);
         }
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -39,6 +44,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Create(Color color)
         {
             if (!ModelState.IsValid)

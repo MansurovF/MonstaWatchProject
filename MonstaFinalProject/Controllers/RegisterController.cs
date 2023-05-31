@@ -74,31 +74,31 @@ namespace MonstaFinalProject.Controllers
                 return View(registerVM);
             }
             await _userManager.AddToRoleAsync(appUser, "Member");
-            string token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
-            string url = Url.Action("EmailConfirm", "Account", new { id = appUser.Id, token = token }, HttpContext.Request.Scheme, HttpContext.Request.Host.ToString());
+            //string token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
+            //string url = Url.Action("EmailConfirm", "Account", new { id = appUser.Id, token = token }, HttpContext.Request.Scheme, HttpContext.Request.Host.ToString());
 
-            string templateFullPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "_EmailConfirm.cshtml");
-            string templateContent = await System.IO.File.ReadAllTextAsync(templateFullPath);
-            //templateContent = templateContent.Replace("{{email}}", appUser.Email);
-            templateContent = templateContent.Replace("{{username}}", appUser.UserName);
-            templateContent = templateContent.Replace("{{url}}", url);
+            //string templateFullPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "_EmailConfirm.cshtml");
+            //string templateContent = await System.IO.File.ReadAllTextAsync(templateFullPath);
+            ////templateContent = templateContent.Replace("{{email}}", appUser.Email);
+            //templateContent = templateContent.Replace("{{username}}", appUser.UserName);
+            //templateContent = templateContent.Replace("{{url}}", url);
 
-            MimeMessage mimeMessage = new MimeMessage();
-            mimeMessage.From.Add(MailboxAddress.Parse(_smtpSetting.Email));
-            mimeMessage.To.Add(MailboxAddress.Parse(appUser.Email));
-            mimeMessage.Subject = "Email Confirmation";
-            mimeMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
-            {
-                Text = templateContent
-            };
-            using (SmtpClient smtpClient = new SmtpClient())
-            {
-                await smtpClient.ConnectAsync(_smtpSetting.Host, _smtpSetting.Port, MailKit.Security.SecureSocketOptions.StartTls);
-                await smtpClient.AuthenticateAsync(_smtpSetting.Email, _smtpSetting.Password);
-                await smtpClient.SendAsync(mimeMessage);
-                await smtpClient.DisconnectAsync(true);
-                smtpClient.Dispose();
-            }
+            //MimeMessage mimeMessage = new MimeMessage();
+            //mimeMessage.From.Add(MailboxAddress.Parse(_smtpSetting.Email));
+            //mimeMessage.To.Add(MailboxAddress.Parse(appUser.Email));
+            //mimeMessage.Subject = "Email Confirmation";
+            //mimeMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            //{
+            //    Text = templateContent
+            //};
+            //using (SmtpClient smtpClient = new SmtpClient())
+            //{
+            //    await smtpClient.ConnectAsync(_smtpSetting.Host, _smtpSetting.Port, MailKit.Security.SecureSocketOptions.StartTls);
+            //    await smtpClient.AuthenticateAsync(_smtpSetting.Email, _smtpSetting.Password);
+            //    await smtpClient.SendAsync(mimeMessage);
+            //    await smtpClient.DisconnectAsync(true);
+            //    smtpClient.Dispose();
+            //}
 
 
             return View(new MonstaFinalProject.ViewModels.RegisterViewModels.RegisterVM());

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Extenions;
 using MonstaFinalProject.Helpers;
 using MonstaFinalProject.Models;
 using MonstaFinalProject.ViewModels;
+using System.Data;
 
 namespace MonstaFinalProject.Areas.Boss.Controllers
 {
@@ -19,6 +21,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             _context = context;
             _env = env;
         }
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public IActionResult Index(int pageIndex = 1)
         {
             IQueryable<Product> queries = _context.Products
@@ -53,6 +56,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Create()
         {
             ViewBag.Brands = await _context.Brands.Where(ca => ca.IsDeleted == false).ToListAsync();
@@ -64,6 +68,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Create(Product product)
         {
             ViewBag.Brands = await _context.Brands.Where(ca => ca.IsDeleted == false).ToListAsync();
@@ -420,6 +425,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return BadRequest();

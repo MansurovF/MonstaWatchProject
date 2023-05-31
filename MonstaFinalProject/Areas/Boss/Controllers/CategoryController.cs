@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MonstaFinalProject.DataAccessLayer;
 using MonstaFinalProject.Helpers;
 using MonstaFinalProject.Models;
 using MonstaFinalProject.ViewModels;
+using System.Data;
 using System.Security.Claims;
 
 namespace MonstaFinalProject.Areas.Boss.Controllers
@@ -20,7 +22,7 @@ namespace MonstaFinalProject.Areas.Boss.Controllers
             _env = env;
         }
 
-
+        [Authorize(Roles = "SuperAdmin,Admin")]
         public async Task<IActionResult> Index(int pageIndex = 1)
         {
             IQueryable<Category> query = _context.Categories
